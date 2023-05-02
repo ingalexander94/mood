@@ -34,7 +34,7 @@ const Detail = ({ params }: Props) => {
         <div className={`${DetailStyles.info} ${DetailStyles.flex}`}>
           <Image
             alt="Foto de el motel"
-            src={"/assets/icon_user.svg"}
+            src={"/assets/Icon_user.svg"}
             width={30}
             height={30}
           />

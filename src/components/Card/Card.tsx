@@ -39,7 +39,7 @@ const Card = () => {
           <div>
             <Image
               alt="Foto del motel"
-              src={"/assets/icon_user.svg"}
+              src={"/assets/Icon_user.svg"}
               width={30}
               height={30}
             />
