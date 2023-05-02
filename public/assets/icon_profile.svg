@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30" viewBox="0 0 30 30">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectángulo_77" data-name="Rectángulo 77" width="30" height="30" fill="#eeeff1" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="Enmascarar_grupo_19" data-name="Enmascarar grupo 19" clip-path="url(#clip-path)">
+    <g id="Icon_feather-user-minus" data-name="Icon feather-user-minus" transform="translate(5.367 3.525)">
+      <path id="Trazado_11" data-name="Trazado 11" d="M18.463,30.232a1.154,1.154,0,0,1-1.154-1.154V26.77a3.466,3.466,0,0,0-3.462-3.462H5.77A3.462,3.462,0,0,0,2.308,26.77v2.308a1.154,1.154,0,0,1-2.308,0V26.77A5.77,5.77,0,0,1,5.77,21h8.078a5.776,5.776,0,0,1,5.77,5.77v2.308A1.154,1.154,0,0,1,18.463,30.232Z" transform="translate(0 -7.153)" fill="#adaeb1"/>
+      <path id="Trazado_12" data-name="Trazado 12" d="M11.02,3A5.77,5.77,0,1,1,5.25,8.77,5.776,5.776,0,0,1,11.02,3Zm0,9.232A3.462,3.462,0,1,0,7.558,8.77,3.466,3.466,0,0,0,11.02,12.232Z" transform="translate(-1.211 -3)" fill="#adaeb1"/>
+    </g>
+  </g>
+</svg>

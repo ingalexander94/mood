@@ -1,0 +1,43 @@
+.bottomfilter {
+  background: var(--gray-backround);
+  position: fixed;
+  bottom: 0;
+  height: 85px;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  width: 100vw;
+  display: grid;
+  place-items: center;
+  z-index: 10;
+}
+
+.bottomfilter ul {
+  display: grid;
+  width: 300px;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+
+.bottomfilter ul li span {
+  font-size: 22px;
+  color: var(--black);
+  font-weight: bold;
+}
+
+.bottomfilter ul li p {
+  font-size: 14px;
+  color: var(--black);
+  font-weight: 500;
+}
+
+.bottomfilter ul li:nth-child(2) {
+  justify-self: flex-end;
+}
+
+@media screen and (min-width: 421px) {
+  .bottomfilter {
+    left: 0;
+  }
+}

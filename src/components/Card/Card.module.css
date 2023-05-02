@@ -1,0 +1,97 @@
+.card {
+  width: 100%;
+  box-shadow: 0px 0px 10px #7c7d8133;
+  border-radius: 9px;
+  overflow: hidden;
+  background: var(--white);
+  padding-bottom: 10px;
+  position: relative;
+}
+
+.card > div {
+  padding: 10px 20px;
+}
+
+.card > button {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  outline: none;
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.4);
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--black);
+}
+
+.card > img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+}
+
+.card div.title h3 {
+  font-size: 18px;
+  color: var(--black);
+  font-weight: bold;
+}
+
+.card div.title p {
+  font-size: 16px;
+  color: var(--black);
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.card div.title p img {
+  filter: invert(48%) sepia(95%) saturate(1315%) hue-rotate(344deg)
+    brightness(100%) contrast(102%);
+}
+
+.card div.info {
+  column-gap: 40px;
+  margin: 10px 0;
+}
+
+.card div.info div {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  column-gap: 5px;
+}
+
+.card div.info div p {
+  text-align: left;
+}
+
+.card div.info div img {
+  background: var(--primary-color);
+  border-radius: 50%;
+}
+
+.card div.info p {
+  font-size: 10px;
+  font-weight: 400;
+  text-align: right;
+}
+
+.card div.details h4 {
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--black);
+}
+
+.card div.details p {
+  font-size: 10px;
+  font-weight: 400;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

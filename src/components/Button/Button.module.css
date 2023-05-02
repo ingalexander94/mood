@@ -1,0 +1,17 @@
+.button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: var(--gradient-background);
+  font-size: 14px;
+  font-weight: bold;
+  height: 33px;
+  padding: 0 20px;
+  color: var(--white);
+  box-shadow: 0px 6px 10px #ff712233;
+  border-radius: 10px;
+}
+
+.button:active {
+  transform: scale(0.9);
+}

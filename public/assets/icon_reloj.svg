@@ -1,0 +1,13 @@
+<svg id="icono_reloj" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 20 20">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectángulo_51" data-name="Rectángulo 51" width="20" height="20" transform="translate(45.158)" fill="#fff" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="Enmascarar_grupo_11" data-name="Enmascarar grupo 11" transform="translate(-45.158)" clip-path="url(#clip-path)">
+    <g id="Grupo_98" data-name="Grupo 98" transform="translate(-4453.245 -693.345)">
+      <path id="Trazado_61" data-name="Trazado 61" d="M0,7.487V6.658c.011-.1.023-.2.034-.3a6.986,6.986,0,0,1,1.776-4A6.936,6.936,0,0,1,5.853.111c.266-.047.536-.074.8-.11h.829c.045.008.089.018.134.025.309.045.622.07.927.136A6.867,6.867,0,0,1,12.7,2.808a6.858,6.858,0,0,1,1.277,5.75,6.83,6.83,0,0,1-2.607,4.118,6.877,6.877,0,0,1-5.008,1.43,6.838,6.838,0,0,1-4-1.771A6.936,6.936,0,0,1,.11,8.29c-.047-.266-.074-.535-.11-.8m7.069,5.626A6.04,6.04,0,1,0,1.031,7.064a6.054,6.054,0,0,0,6.038,6.049" transform="translate(4501.331 696.273)" fill="#1c1e28"/>
+      <path id="Trazado_62" data-name="Trazado 62" d="M180.591,103.551h.255c.658,0,1.316,0,1.974,0a.516.516,0,0,1,.527.51.5.5,0,0,1-.5.514q-1.387.009-2.775,0a.491.491,0,0,1-.5-.512q-.005-1.8,0-3.6a.513.513,0,1,1,1.025.01c0,.966,0,1.933,0,2.9v.181" transform="translate(4327.98 599.795)" fill="#1c1e28"/>
+    </g>
+  </g>
+</svg>

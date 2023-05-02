@@ -1,0 +1,13 @@
+<svg id="icono_filtro" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="37" height="37" viewBox="0 0 37 37">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectángulo_38" data-name="Rectángulo 38" width="37" height="37" transform="translate(0 0)" fill="#fff" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="Enmascarar_grupo_2" data-name="Enmascarar grupo 2" transform="translate(0 0)" clip-path="url(#clip-path)">
+    <g id="Grupo_27" data-name="Grupo 27" transform="translate(5.826 7.842)">
+      <path id="Trazado_29" data-name="Trazado 29" d="M22.334,3.9c.651,0,1.289,0,1.927,0a.98.98,0,1,1,0,1.949c-.638,0-1.276,0-1.907,0a4.894,4.894,0,0,1-9.586,0H1.179a1.9,1.9,0,0,1-.423-.028A.972.972,0,0,1,.94,3.9c.091,0,.183,0,.274,0H12.765A4.907,4.907,0,0,1,14.8.855a4.733,4.733,0,0,1,2.99-.848A4.915,4.915,0,0,1,22.334,3.9m-1.861.968A2.924,2.924,0,1,0,17.556,7.8a2.93,2.93,0,0,0,2.917-2.93" transform="translate(0 0)" fill="#fff"/>
+      <path id="Trazado_30" data-name="Trazado 30" d="M12.605,149.578a4.894,4.894,0,0,1-9.585,0c-.6,0-1.2,0-1.811,0a2.177,2.177,0,0,1-.424-.022.977.977,0,0,1-.777-1.021.966.966,0,0,1,.943-.9c.578-.013,1.157,0,1.736,0h.322a4.894,4.894,0,0,1,9.584,0H24.181a2.186,2.186,0,0,1,.365.014.974.974,0,0,1-.1,1.932c-.1.007-.2,0-.3,0H12.605Zm-4.793,1.949a2.924,2.924,0,1,0-2.931-2.917,2.931,2.931,0,0,0,2.931,2.917" transform="translate(-0.006 -132.03)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

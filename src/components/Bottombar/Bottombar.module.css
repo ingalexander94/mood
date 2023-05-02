@@ -1,0 +1,77 @@
+.bottombar {
+  background: var(--gray-backround);
+  position: fixed;
+  bottom: 0;
+  height: 85px;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  width: 100vw;
+  display: grid;
+  place-items: center;
+}
+
+.bottombar ul {
+  display: grid;
+  width: 300px;
+  grid-template-columns: repeat(4, 75px);
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  position: relative;
+}
+
+.bottombar ul li a {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.bottombar ul li a:active {
+  transform: scale(0.9);
+}
+
+.bottombar ul div {
+  height: 10px;
+  width: 10px;
+  background: var(--gradient-background);
+  border-radius: 50%;
+  position: absolute;
+  transition: 0.5s;
+  bottom: -10px;
+  left: 33px;
+}
+
+.bottombar ul li.active a {
+  color: var(--black);
+}
+
+.bottombar ul li.active a img {
+  filter: invert(10%) sepia(6%) saturate(2409%) hue-rotate(193deg)
+    brightness(10%) contrast(93%) !important;
+}
+
+.bottombar ul li:nth-child(1).active ~ div {
+  transform: translateX(calc(75px * 0));
+}
+
+.bottombar ul li:nth-child(2).active ~ div {
+  transform: translateX(calc(75px * 1));
+}
+
+.bottombar ul li:nth-child(3).active ~ div {
+  transform: translateX(calc(75px * 2));
+}
+
+.bottombar ul li:nth-child(4).active ~ div {
+  transform: translateX(calc(75px * 3));
+}
+
+@media screen and (min-width: 421px) {
+  .bottombar {
+    left: 0;
+  }
+}

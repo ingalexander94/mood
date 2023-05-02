@@ -1,0 +1,38 @@
+.promotion {
+  background: var(--primary-color);
+  box-shadow: 0px 0px 10px #7c7d8133;
+  border-radius: 9px;
+  background: var(--gray-backround);
+  padding: 20px 20px 20px 30px;
+  scroll-snap-align: start;
+  position: relative;
+}
+
+.promotion::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 20px;
+  height: 100%;
+  background: var(--primary-color);
+  border-top-left-radius: 9px;
+  border-bottom-left-radius: 9px;
+}
+
+.promotion p {
+  font-size: 14px;
+  color: var(--black);
+  font-weight: bold;
+}
+
+.promotion p span:nth-child(1) {
+  font-size: 30px;
+  margin-right: 5px;
+}
+
+.promotion p span:nth-child(2) {
+  font-size: 14px;
+  font-weight: 400;
+  text-decoration: line-through;
+}

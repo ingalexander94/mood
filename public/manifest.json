@@ -1,0 +1,54 @@
+{
+  "name": "Reservas Mood",
+  "short_name": "Mood",
+  "description": "Aplicación para realizar reservas de moteles en la ciudad de Cúcuta",
+  "start_url": "/",
+  "orientation": "portrait",
+  "lang": "es-CO",
+  "display": " standalone",
+  "background_color": "#FF7122",
+  "theme_color": "#FF7122",
+  "icons": [
+    {
+      "src": "./icons/icon-36x36.png",
+      "sizes": "36x36",
+      "type": "image/png"
+    },
+    {
+      "src": "./icons/icon-48x48.png",
+      "sizes": "48x48",
+      "type": "image/png"
+    },
+    {
+      "src": "./icons/icon-72x72.png",
+      "sizes": "72x72",
+      "type": "image/png"
+    },
+    {
+      "src": "./icons/icon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "./icons/icon-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "./icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "./icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "./icons/maskable.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

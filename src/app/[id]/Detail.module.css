@@ -1,0 +1,119 @@
+.detail > img {
+  width: 100%;
+  height: 235px;
+  object-fit: cover;
+}
+
+.detail > div {
+  padding: 20px 10px;
+}
+
+.detail > div div.flex {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  margin-top: 10px;
+  font-size: 16px;
+  color: var(--black);
+  font-weight: 500;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.detail > div > p {
+  color: var(--black);
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+.detail > div div.info img {
+  background: var(--primary-color);
+  border-radius: 50%;
+}
+
+.detail > div h3 {
+  font-size: 22px;
+  font-weight: bold;
+  color: var(--black);
+}
+
+.detail > div hr {
+  height: 2px;
+  background: var(--black);
+  margin: 20px 0;
+}
+
+.detail > div h4 {
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--black);
+}
+
+.detail > div ul {
+  margin: 10px 0;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
+.detail > div ul li {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}
+
+.detail > div ul li span,
+.detail > div ul li p {
+  color: var(--black);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.detail > div div.califications {
+  display: flex;
+}
+
+.detail > div div.califications span {
+  font-size: 50px;
+  font-weight: bold;
+  color: var(--black);
+}
+
+.detail > div div.califications ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.detail > div section.promotions {
+  margin-top: 10px;
+  display: flex;
+  column-gap: 20px;
+  width: 100%;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.detail > div section::-webkit-scrollbar {
+  display: none;
+}
+
+.detail > div section.rooms {
+  margin-top: 20px;
+  display: flex;
+  column-gap: 20px;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.detail > div section.rooms article {
+  min-width: 270px;
+  scroll-snap-align: start;
+}
