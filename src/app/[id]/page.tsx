@@ -1,5 +1,4 @@
 import Back from "@/components/Back/Back";
-// import photo from "../../../public/assets/habitacion.jpg";
 import Image from "next/image";
 import DetailStyles from "./Detail.module.css";
 import { Amenity, AmenityModel } from "@/models/amenities.models";
@@ -30,7 +29,7 @@ const Detail = ({ params }: Props) => {
     <div className={DetailStyles.detail}>
       <Back isShared={true} />
       <Slider height="235px" more={true} multiple={true} />
-      <div>
+      <div className={DetailStyles.body}>
         <h3>Titulo de la habitación</h3>
         <div className={`${DetailStyles.info} ${DetailStyles.flex}`}>
           <Image

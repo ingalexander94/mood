@@ -9,11 +9,8 @@ type Props = {
 
 const Slider = ({ height, more, multiple }: Props) => {
   return (
-    <div className={SliderStyles.slider}>
-      <section
-        className={!multiple ? SliderStyles.unique : ""}
-        style={{ height }}
-      >
+    <div className={SliderStyles.slider} style={{ height }}>
+      <section className={!multiple ? SliderStyles.unique : ""}>
         <article>
           <Image
             alt="Foto de una habitación"
