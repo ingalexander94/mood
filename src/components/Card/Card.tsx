@@ -3,10 +3,14 @@
 import Image from "next/image";
 import CardStyles from "./Card.module.css";
 import Button from "@/components/Button/Button";
-import photo from "../../../public/assets/habitacion.jpg";
 import { useRouter } from "next/navigation";
+import Slider from "../Slider/Slider";
 
-const Card = () => {
+type Props = {
+  multiple: boolean;
+};
+
+const Card = ({ multiple }: Props) => {
   const router = useRouter();
 
   const navigateToDetail = () => router.push(`/${1}`);
@@ -21,8 +25,8 @@ const Card = () => {
           width={20}
         />
       </button>
-      <Image alt="Foto de la habitación" src={photo} priority={true} />
-      <div>
+      <Slider height="190px" more={false} multiple={multiple} />
+      <div className={CardStyles.body}>
         <div className={`${CardStyles.title} ${CardStyles.flex}`}>
           <h3>Titulo de la habitación</h3>
           <p>

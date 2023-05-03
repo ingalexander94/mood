@@ -1,10 +1,11 @@
 import Back from "@/components/Back/Back";
-import photo from "../../../public/assets/habitacion.jpg";
+// import photo from "../../../public/assets/habitacion.jpg";
 import Image from "next/image";
 import DetailStyles from "./Detail.module.css";
 import { Amenity, AmenityModel } from "@/models/amenities.models";
 import Promotion from "@/components/Promotion/Promotion";
 import Card from "@/components/Card/Card";
+import Slider from "@/components/Slider/Slider";
 
 type Props = {
   params?: {
@@ -28,7 +29,7 @@ const Detail = ({ params }: Props) => {
   return (
     <div className={DetailStyles.detail}>
       <Back isShared={true} />
-      <Image alt="Foto de la habitación" src={photo} priority={true} />
+      <Slider height="235px" more={true} multiple={true} />
       <div>
         <h3>Titulo de la habitación</h3>
         <div className={`${DetailStyles.info} ${DetailStyles.flex}`}>
@@ -171,7 +172,7 @@ const Detail = ({ params }: Props) => {
         <h4>Otras habitaciones del mismo establecimiento</h4>
         <section className={DetailStyles.rooms}>
           {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((x) => (
-            <Card key={x} />
+            <Card multiple={false} key={x} />
           ))}
         </section>
       </div>

@@ -8,7 +8,7 @@
   position: relative;
 }
 
-.card > div {
+.card > div.body {
   padding: 10px 20px;
 }
 
@@ -25,12 +25,7 @@
   display: grid;
   place-items: center;
   border: 1px solid var(--black);
-}
-
-.card > img {
-  width: 100%;
-  height: 190px;
-  object-fit: cover;
+  z-index: 5;
 }
 
 .card div.title h3 {

@@ -1,0 +1,17 @@
+<svg id="icono_corazón" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30" viewBox="0 0 30 30">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectángulo_38" data-name="Rectángulo 38" width="30" height="30" fill="#fff" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+    <clipPath id="clip-path-2">
+      <rect id="Rectángulo_193" data-name="Rectángulo 193" width="24.561" height="21.495" fill="#1c1e28"/>
+    </clipPath>
+  </defs>
+  <g id="Enmascarar_grupo_2" data-name="Enmascarar grupo 2" clip-path="url(#clip-path)">
+    <g id="Grupo_426" data-name="Grupo 426" transform="translate(2.719 5.752)">
+      <g id="Grupo_426-2" data-name="Grupo 426" clip-path="url(#clip-path-2)">
+        <path id="Trazado_194" data-name="Trazado 194" d="M24.553,6.589c-.028-.187-.054-.377-.088-.562A6.852,6.852,0,0,0,19.665.39a6.838,6.838,0,0,0-7.171,1.675.875.875,0,0,0-.132.258,2.231,2.231,0,0,1-.267-.252A6.9,6.9,0,0,0,4.648.478,7.05,7.05,0,0,0,.424,9.508a14.185,14.185,0,0,0,2.838,4.707,37.332,37.332,0,0,0,8.5,7.1.887.887,0,0,0,1.068,0c.753-.512,1.525-1,2.263-1.527a33.227,33.227,0,0,0,6.658-6.1,12.921,12.921,0,0,0,2.487-4.5c.144-.5.213-1.028.317-1.542Z" transform="translate(0 0)" fill="#1c1e28"/>
+      </g>
+    </g>
+  </g>
+</svg>

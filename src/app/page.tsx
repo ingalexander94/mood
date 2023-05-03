@@ -23,7 +23,7 @@ const App = () => {
       />
       <section className={HomeStyles.rooms}>
         {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((x) => (
-          <Card key={x} />
+          <Card multiple={true} key={x} />
         ))}
       </section>
       <Bottombar />

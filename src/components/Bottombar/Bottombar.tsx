@@ -27,7 +27,7 @@ const Bottombar = () => {
             <Link href={path}>
               <Image
                 alt={`Icono de ${name}`}
-                src={`/assets/${icon}`}
+                src={`/assets/${pathname === path ? "active_" : ""}${icon}`}
                 width={30}
                 height={30}
               />

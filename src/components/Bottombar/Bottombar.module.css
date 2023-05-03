@@ -49,11 +49,6 @@
   color: var(--black);
 }
 
-.bottombar ul li.active a img {
-  filter: invert(10%) sepia(6%) saturate(2409%) hue-rotate(193deg)
-    brightness(10%) contrast(93%) !important;
-}
-
 .bottombar ul li:nth-child(1).active ~ div {
   transform: translateX(calc(75px * 0));
 }
