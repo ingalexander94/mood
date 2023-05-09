@@ -50,6 +50,14 @@
   color: var(--black);
 }
 
+.bottombar ul div.show {
+  transform: translateY(0);
+}
+
+.bottombar ul div.hide {
+  transform: translateY(40px);
+}
+
 .bottombar ul li:nth-child(1).active ~ div {
   transform: translateX(calc(75px * 0));
 }

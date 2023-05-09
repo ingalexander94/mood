@@ -37,6 +37,10 @@ const SEO = () => {
         rel="apple-touch-startup-image"
         href="/icons/apple-touch-icon.png"
       />
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+      />
     </head>
   );
 };

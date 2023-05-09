@@ -35,7 +35,15 @@ const Bottombar = () => {
             </Link>
           </li>
         ))}
-        <div></div>
+        {
+          <div
+            className={
+              pathNames.find(({ path }) => path == pathname)
+                ? BottombarStyles.show
+                : BottombarStyles.hide
+            }
+          ></div>
+        }
       </ul>
     </nav>
   );
