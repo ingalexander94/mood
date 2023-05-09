@@ -8,8 +8,8 @@ const Header = () => {
       <div className={HeaderStyles.filter}>
         <div>
           <Image
-            alt="Icono de buscar"
-            src={"/assets/icon_search.svg"}
+            alt="Icono de ubicación"
+            src={"/assets/icon_ubication.svg"}
             width={25}
             height={25}
           />

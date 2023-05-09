@@ -51,7 +51,7 @@ div.slider > button {
   cursor: pointer;
   width: 100px;
   height: 33px;
-  border: 1px solid var(--black);
+  border: none;
   border-radius: 10px;
   background: white;
   outline: none;

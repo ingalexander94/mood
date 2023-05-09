@@ -21,10 +21,10 @@
   width: 30px;
   outline: none;
   cursor: pointer;
-  background: rgba(0, 0, 0, 0.4);
+  background: var(--white);
   display: grid;
   place-items: center;
-  border: 1px solid var(--black);
+  border: none;
   z-index: 5;
 }
 

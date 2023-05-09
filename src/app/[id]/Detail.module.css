@@ -12,6 +12,65 @@
   font-weight: 500;
 }
 
+.detail > div p.ubication {
+  position: relative;
+  padding-left: 25px;
+}
+
+.detail > div p.ubication::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-image: url("../../../public/assets/icon_ubication.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  left: 0;
+}
+
+.detail > div div.info {
+  column-gap: 30px;
+}
+
+.detail > div div.info p {
+  margin-left: 20px;
+  position: relative;
+}
+
+.detail > div div.info p.comments {
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.detail > div div.info p.star {
+  padding-left: 5px;
+}
+
+.detail > div div.info p.comments::before {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background-image: url("../../../public/assets/icon_comment.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  left: -30px;
+  top: -3px;
+}
+
+.detail > div div.info p.star::before {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background-image: url("../../../public/assets/icon_star_orange.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  left: -25px;
+  top: -1px;
+}
+
 .underline {
   text-decoration: underline;
 }
@@ -23,11 +82,6 @@
   margin-top: 10px;
 }
 
-.detail > div div.info img {
-  background: var(--primary-color);
-  border-radius: 50%;
-}
-
 .detail > div h3 {
   font-size: 22px;
   font-weight: bold;
@@ -36,7 +90,7 @@
 
 .detail > div hr {
   height: 2px;
-  background: var(--black);
+  background: var(--light-backround);
   margin: 20px 0;
 }
 
@@ -46,11 +100,99 @@
   color: var(--black);
 }
 
+.detail > div div.motel {
+  background: var(--white);
+  box-shadow: 0px 0px 10px #7c7d8133;
+  border-radius: 9px;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 20px;
+  color: var(--black);
+  margin-top: 25px;
+}
+
+.detail > div div.motel div.avatar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 20px;
+}
+
+.detail > div div.motel div hr {
+  margin: 10px 0 !important;
+}
+
+.detail > div div.motel img {
+  background: var(--primary-color);
+  border-radius: 50%;
+}
+
+.detail > div div.motel h5,
+.detail > div div.motel span {
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  position: relative;
+}
+
+.detail > div div.motel span.star::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-image: url("../../../public/assets/icon_star_black.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  right: -25px;
+}
+
+.detail > div div.motel p {
+  font-size: 10px;
+  font-weight: 400;
+  margin-top: 5px;
+}
+
+.detail > div div.profile {
+  margin: 20px 0 25px 0;
+  column-gap: 20px;
+}
+
+.detail > div div.profile button,
+.detail > div div.profile a {
+  border: 1px solid var(--black);
+  outline: none;
+  text-decoration: none;
+  height: 50px;
+  border-radius: 10px;
+  padding: 0 15px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.detail > div div.profile button {
+  color: var(--white);
+  background: var(--black);
+}
+
+.detail > div div.profile a {
+  display: grid;
+  place-items: center;
+  color: var(--black);
+  background: var(--white);
+}
+
 .detail > div ul {
   margin: 10px 0;
   display: flex;
   flex-direction: column;
   row-gap: 10px;
+}
+
+.detail > div ul.about {
+  margin: 20px;
 }
 
 .detail > div ul li {
