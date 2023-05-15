@@ -18,7 +18,7 @@ const Slider = ({ height, more, multiple }: Props) => {
     const section = event.target as HTMLInputElement;
     const { scrollLeft, scrollWidth } = section;
     setCurrentIndex(scrollLeft / (scrollWidth / 3));
-  }, 100);
+  }, 5);
 
   return (
     <div className={SliderStyles.slider} style={{ height }}>

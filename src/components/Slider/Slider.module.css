@@ -74,5 +74,4 @@ div.slider > div span.active {
   background: transparent;
   border: 1px solid white;
   cursor: default;
-  transition: border ease-in 0.2s, background ease-in 0.2s;
 }

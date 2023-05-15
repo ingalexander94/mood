@@ -59,8 +59,25 @@
   scroll-snap-align: start;
 }
 
+.categories article.list ul li:active {
+  transform: scale(0.98);
+}
+
+.categories article.list ul li.active {
+  background: var(--gradient-background);
+}
+
 .categories article.list ul li:nth-child(1) {
   margin-left: 10px;
+}
+
+.categories article.list ul li.active img {
+  filter: invert(100%) sepia(7%) saturate(27%) hue-rotate(259deg)
+    brightness(109%) contrast(106%);
+}
+
+.categories article.list ul li.active span {
+  color: var(--white);
 }
 
 .categories article.list ul li span {
