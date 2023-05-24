@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Cúcuta",
+    "photo": "/assets/mapa.png",
+    "latitude": 7.89391,
+    "longitude": -72.50782,
+    "state": true
+  },
+  {
+    "name": "Los Patios",
+    "photo": "/assets/mapa.png",
+    "latitude": 7.83793,
+    "longitude": -72.5037,
+    "state": true
+  },
+  {
+    "name": "Villa del Rosario",
+    "photo": "/assets/mapa.png",
+    "latitude": 7.83389,
+    "longitude": -72.47417,
+    "state": true
+  }
+]

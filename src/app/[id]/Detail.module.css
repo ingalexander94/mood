@@ -1,3 +1,46 @@
+.detail > div.cover {
+  position: relative;
+}
+
+.detail > div.cover > div.share {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  top: 10px;
+  padding: 0 10px;
+  z-index: 10;
+}
+
+.detail > div.cover > div.share div {
+  display: flex;
+  column-gap: 10px;
+}
+
+.detail > div.cover > div.share a:active {
+  transform: scale(0.9);
+}
+
+.detail > div.cover > div.share button,
+.detail > div.cover > div.share a {
+  border-radius: 50%;
+  background: var(--white);
+  outline: none;
+  display: grid;
+  text-decoration: none;
+  place-items: center;
+  border: none;
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+}
+
+.detail > div.cover > div.share img {
+  filter: invert(0%) sepia(92%) saturate(32%) hue-rotate(162deg) brightness(50%)
+    contrast(107%);
+}
+
 .detail > div.body {
   padding: 20px 10px;
 }
@@ -240,7 +283,7 @@
 }
 
 .detail > div section.rooms {
-  margin-top: 20px;
+  margin: 20px 0;
   display: flex;
   column-gap: 20px;
   overflow-x: scroll;

@@ -1,3 +1,19 @@
+.container {
+  position: relative;
+}
+
+.wrapper {
+  background: white;
+  padding-top: 40px;
+  padding-bottom: 20px;
+  position: relative;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  box-shadow: 0px 0px 10px #8f8f9033;
+  z-index: 10;
+  top: -20px;
+}
+
 .rooms {
   display: flex;
   flex-direction: column;

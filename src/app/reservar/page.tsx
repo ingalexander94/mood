@@ -1,7 +1,16 @@
-import ReserveStyles from "./Reserve.module.css";
+import { IPlace } from "@/interfaces/Place.interface";
+import { fetchRequest } from "@/utils/fetch";
+import FormReserve from "@/components/FormReserve/FormReserve";
 
-const Reserve = () => {
-  return <div className={ReserveStyles.center}>Reservar</div>;
+async function getPlaces(): Promise<IPlace[]> {
+  const res = await fetchRequest(process.env.API_URL || "", "places");
+  return res.data ?? [];
+}
+
+const Reserve = async () => {
+  const places: IPlace[] = await getPlaces();
+
+  return <FormReserve places={places} />;
 };
 
 export default Reserve;

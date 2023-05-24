@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import BottombarStyles from "./Bottombar.module.css";
-import { Route, Routes } from "@/models/routes.model";
+import { Route, Routes } from "@/interfaces/Routes.interface";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 

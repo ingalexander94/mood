@@ -8,7 +8,7 @@
   width: 100vw;
   display: grid;
   place-items: center;
-  z-index: 10;
+  z-index: 20;
 }
 
 .bottomfilter ul {
@@ -20,13 +20,32 @@
   list-style: none;
 }
 
-.bottomfilter ul li span {
+.bottomfilter ul li div span {
   font-size: 22px;
   color: var(--black);
   font-weight: bold;
 }
 
-.bottomfilter ul li p {
+.bottomfilter ul li button.clear {
+  background: none;
+  padding: 0;
+  margin: 0;
+  border: none;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 5px;
+  cursor: pointer;
+}
+
+.bottomfilter ul li button.clear span {
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.bottomfilter ul li div p {
   font-size: 14px;
   color: var(--black);
   font-weight: 500;

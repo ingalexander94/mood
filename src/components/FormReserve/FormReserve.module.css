@@ -1,0 +1,301 @@
+section.wrapper {
+  border-radius: 10px;
+  max-width: 750px;
+  padding: 10px;
+  overflow: hidden;
+}
+
+section.wrapper > label {
+  background: none;
+  outline: none;
+  border: none;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  column-gap: 5px;
+  cursor: pointer;
+  color: var(--black);
+}
+
+section.wrapper > label img {
+  filter: invert(0%) sepia(92%) saturate(32%) hue-rotate(162deg) brightness(50%)
+    contrast(107%);
+}
+
+section.wrapper div.filter {
+  display: block;
+}
+
+section.wrapper div.search {
+  display: none;
+}
+
+section.wrapper div.search article label input {
+  width: 100%;
+  border: none;
+  font-size: 14px;
+  color: var(--black);
+  outline: none;
+  padding-left: 10px;
+}
+
+section.wrapper div.search article ul {
+  list-style: none;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  max-height: 280px;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+
+section.wrapper div.search article ul::-webkit-scrollbar {
+  width: 5px;
+}
+
+section.wrapper div.search article ul::-webkit-scrollbar-thumb {
+  background: var(--gray-text);
+  border-radius: 20px;
+}
+
+section.wrapper div.search article ul li {
+  display: flex;
+  scroll-snap-align: start;
+  align-items: center;
+  column-gap: 15px;
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--black);
+  cursor: pointer;
+}
+
+section.wrapper div.search article ul li div {
+  background: var(--gradient-background);
+  min-width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border-radius: 5px;
+}
+
+section.wrapper div.search article ul li div img {
+  filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(221deg)
+    brightness(150%) contrast(104%);
+}
+
+section.wrapper div.search {
+  display: none;
+}
+
+section.wrapper input[type="checkbox"]:checked ~ div.search {
+  display: block;
+}
+
+section.wrapper input[type="checkbox"]:checked ~ label {
+  display: flex;
+}
+
+section.wrapper input[type="checkbox"]:checked ~ div.filter {
+  display: none;
+}
+
+section.wrapper article {
+  background: white;
+  box-shadow: 0px 0px 10px #7c7d8133;
+  border-radius: 9px;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+section.wrapper article > label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 5px;
+  height: 40px;
+  cursor: pointer;
+  position: relative;
+  border: 1px solid #adaeb1;
+  border-radius: 10px;
+  padding: 5px 10px;
+}
+
+section.wrapper article label span {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--black);
+}
+
+section.wrapper article label span.full {
+  min-width: 150px;
+}
+
+section.wrapper article label div.type {
+  display: flex;
+  align-items: center;
+  column-gap: 5px;
+}
+
+section.wrapper article label div.actions {
+  display: none;
+  column-gap: 10px;
+  width: 100%;
+  justify-content: flex-end;
+}
+
+section.wrapper article label div.actions button,
+section.wrapper article label div.actions label {
+  outline: none;
+  padding: 5px 15px;
+  border: none;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 10px;
+  background: none;
+  border: none;
+}
+
+section.wrapper article label div.actions label {
+  color: var(--black);
+  font-size: 20px;
+}
+
+section.wrapper article label div.actions label:active {
+  transform: scale(0.9);
+}
+
+section.wrapper article label div.actions button:nth-child(1) {
+  border: 1px solid var(--black);
+}
+
+section.wrapper article label div.actions button:nth-child(2) {
+  background: var(--gradient-background);
+  color: var(--white);
+}
+
+section.wrapper article > div {
+  max-height: 0;
+  overflow: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+section.wrapper article > div.places {
+  margin-top: 20px;
+  max-height: 100vh;
+}
+
+section.wrapper article > div input {
+  background: var(--light-backround);
+  width: 100%;
+  padding-left: 3px;
+  border: none;
+  height: 60px;
+  outline: none;
+  font-size: 34px;
+  color: var(--black);
+  font-size: 700;
+  -webkit-appearance: none;
+  appearance: none;
+  position: relative;
+}
+
+section.wrapper article > div input[type="date"] {
+  padding-left: calc(calc(100% - 210px) / 2);
+}
+
+section.wrapper article > div input[type="time"] {
+  padding-left: calc(calc(100% - 100px) / 2);
+}
+
+section.wrapper article > div input::-webkit-calendar-picker-indicator {
+  background: transparent;
+  width: 100%;
+  position: absolute;
+  left: -10px;
+}
+
+section.wrapper
+  article
+  > div
+  input[type="time"]::-webkit-datetime-edit-ampm-field {
+  display: none;
+}
+
+section.wrapper article > div::-webkit-scrollbar,
+section.wrapper article > div ul::-webkit-scrollbar {
+  display: none;
+}
+
+section.wrapper article > div ul {
+  display: flex;
+  max-width: 100%;
+  overflow: scroll;
+  scroll-snap-type: x mandatory;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  column-gap: 20px;
+}
+
+section.wrapper article > div ul li {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  scroll-snap-align: start;
+  align-items: center;
+  cursor: pointer;
+}
+
+section.wrapper article > div ul li.active img {
+  border: 2px solid var(--primary-color);
+  border-radius: 5px;
+}
+
+section.wrapper article > div ul li.active span {
+  color: var(--black);
+}
+
+section.wrapper article > div ul li span {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+section.wrapper input[type="radio"],
+section.wrapper input[type="checkbox"] {
+  display: none;
+}
+
+section.wrapper article input[type="radio"]:checked ~ div {
+  max-height: 100vh;
+  padding: 10px 0;
+  margin-top: 10px;
+  display: grid;
+  place-items: center;
+}
+
+section.wrapper article input[type="radio"]:checked ~ label {
+  cursor: default;
+}
+
+section.wrapper article input[type="radio"]:checked ~ label::before {
+  transform: rotate(-180deg);
+  transition: transform 0.5s;
+}
+
+section.wrapper article input[type="radio"]:checked ~ label div {
+  display: flex;
+}
+
+@media screen and (max-width: 420px) {
+  section.wrapper article label,
+  section.wrapper article label div {
+    column-gap: 5px;
+  }
+
+  section.wrapper article label div button {
+    padding: 3px 5px !important;
+  }
+}

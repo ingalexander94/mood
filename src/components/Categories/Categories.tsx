@@ -1,47 +1,48 @@
 "use client";
 
-import { Category } from "@/models/categories.model";
+import { ICategory } from "@/interfaces/Category.interface";
 import CategoriesStyles from "./Categories.module.css";
 import Image from "next/image";
-import { useState } from "react";
+import { useContext, useEffect } from "react";
+import { GlobalContext } from "@/context/global";
 
 interface Props {
-  categories: Category[];
+  categories: ICategory[];
 }
 
 const Categories = ({ categories: data }: Props) => {
-  const [categories, setCategories] = useState<Category[]>(data);
+  const { categories, indexCategory, loadCategories, activateCategory } =
+    useContext(GlobalContext);
 
-  const handleSelectCategory = (i: number) => {
-    let temp = [...categories];
-    temp[i].active = !temp[i].active;
-    setCategories(temp);
-    temp = [];
-  };
+  useEffect(() => {
+    loadCategories(data);
+    return () => {};
+  }, []);
 
   return (
     <section className={CategoriesStyles.categories}>
-      <article className={CategoriesStyles.info}>
+      {/* <article className={CategoriesStyles.info}>
         <h3>Categorías</h3>
         <button>Todas las categorías</button>
-      </article>
+      </article> */}
       <article className={CategoriesStyles.list}>
         <ul>
-          {categories.map(({ id, name, icon, active }, i) => (
-            <li
-              onClick={() => handleSelectCategory(i)}
-              className={active ? CategoriesStyles.active : ""}
-              key={+id}
-            >
-              <Image
-                alt={`Icono de ${name}`}
-                src={`/assets/${icon}`}
-                width={25}
-                height={25}
-              />
-              <span>{name}</span>
-            </li>
-          ))}
+          {categories &&
+            categories.map(({ id, name, icon }, i) => (
+              <li
+                onClick={() => activateCategory(i)}
+                className={i === indexCategory ? CategoriesStyles.active : ""}
+                key={id.toString()}
+              >
+                <Image
+                  alt={`Icono de ${name}`}
+                  src={icon}
+                  width={25}
+                  height={25}
+                />
+                <span>{name}</span>
+              </li>
+            ))}
         </ul>
       </article>
     </section>

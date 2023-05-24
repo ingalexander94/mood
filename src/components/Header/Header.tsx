@@ -6,19 +6,21 @@ const Header = () => {
   return (
     <header className={HeaderStyles.header}>
       <div className={HeaderStyles.filter}>
-        <div>
-          <Image
-            alt="Icono de ubicación"
-            src={"/assets/icon_ubication.svg"}
-            width={25}
-            height={25}
-          />
+        <Link className={HeaderStyles.search} href={"/reservar"}>
           <div>
-            <h3>¿Dónde quieres ir?</h3>
-            <p>¿Cuándo? - ¿A que hora?</p>
+            <Image
+              alt="Icono de ubicación"
+              src={"/assets/icon_ubication.svg"}
+              width={25}
+              height={25}
+            />
+            <div>
+              <h3>¿Dónde quieres ir?</h3>
+              <p>¿Cuándo? - ¿A que hora?</p>
+            </div>
           </div>
-        </div>
-        <Link href={"/reservar"}>
+        </Link>
+        <Link className={HeaderStyles.more} href={"/"}>
           <Image
             alt="Icono de filtros"
             src={"/assets/icon_filter.svg"}

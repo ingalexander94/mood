@@ -1,0 +1,8 @@
+section.wrapper {
+  height: 350px;
+  width: 100%;
+  background: var(--gray-backround);
+  position: sticky;
+  top: 95px;
+  z-index: 5;
+}

@@ -10,9 +10,11 @@ const nextConfig = {
   reactStrictMode: true,
   experimental: {
     appDir: true,
+    serverComponentsExternalPackages: ["mongoose"],
     plugins: ["web-manifest"],
   },
   webpack: (config, { webpack }) => {
+    config.experiments = { ...config.experiments, topLevelAwait: true };
     config.plugins.push(new webpack.ContextReplacementPlugin(/.*$/, false));
     config.performance = {
       hints: false,

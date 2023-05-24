@@ -13,7 +13,7 @@ const DetailLayout = ({ children }: Props) => {
   return (
     <>
       {children}
-      <BottomFilter />
+      <BottomFilter textButton="Reservar" showClear={false} />
     </>
   );
 };

@@ -8,9 +8,10 @@ import Slider from "../Slider/Slider";
 
 type Props = {
   multiple: boolean;
+  showInfo: boolean;
 };
 
-const Card = ({ multiple }: Props) => {
+const Card = ({ multiple, showInfo }: Props) => {
   const router = useRouter();
 
   const navigateToDetail = () => router.push(`/${1}`);
@@ -27,7 +28,11 @@ const Card = ({ multiple }: Props) => {
       </button>
       <Slider height="190px" more={false} multiple={multiple} />
       <div className={CardStyles.body}>
-        <div className={`${CardStyles.title} ${CardStyles.flex}`}>
+        <div
+          className={`${CardStyles.title} ${CardStyles.flex} ${
+            !showInfo ? CardStyles.row : ""
+          }`}
+        >
           <h3>Titulo de la habitación</h3>
           <p>
             <Image
@@ -39,18 +44,20 @@ const Card = ({ multiple }: Props) => {
             <span>4/5</span>
           </p>
         </div>
-        <div className={`${CardStyles.info} ${CardStyles.flex}`}>
-          <div>
-            <Image
-              alt="Foto del motel"
-              src={"/assets/Icon_user.svg"}
-              width={30}
-              height={30}
-            />
-            <p>Nombre del Motel</p>
+        {showInfo && (
+          <div className={`${CardStyles.info} ${CardStyles.flex}`}>
+            <div>
+              <Image
+                alt="Foto del motel"
+                src={"/assets/Icon_user.svg"}
+                width={30}
+                height={30}
+              />
+              <p>Nombre del Motel</p>
+            </div>
+            <p>Aquí colocamos una descripción breve de la habitación</p>
           </div>
-          <p>Aquí colocamos una descripción breve de la habitación</p>
-        </div>
+        )}
         <div className={`${CardStyles.details} ${CardStyles.flex}`}>
           <div>
             <h4>$120.000</h4>

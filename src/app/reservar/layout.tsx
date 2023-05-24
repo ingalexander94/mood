@@ -1,4 +1,5 @@
 import Back from "@/components/Back/Back";
+import BottomFilter from "@/components/BottomFilter/BottomFilter";
 import { Metadata } from "next";
 
 type Props = {
@@ -14,6 +15,7 @@ const ReserveLayout = ({ children }: Props) => {
     <>
       <Back isShared={false} />
       {children}
+      <BottomFilter textButton="Realizar búsqueda" showClear={true} />
     </>
   );
 };

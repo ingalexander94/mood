@@ -1,7 +1,6 @@
-import Back from "@/components/Back/Back";
 import Image from "next/image";
 import DetailStyles from "./Detail.module.css";
-import { Amenity, AmenityModel } from "@/models/amenities.models";
+import { Amenity, AmenityModel } from "@/interfaces/amenities.interface";
 import Promotion from "@/components/Promotion/Promotion";
 import Card from "@/components/Card/Card";
 import Slider from "@/components/Slider/Slider";
@@ -28,8 +27,37 @@ const Detail = ({ params }: Props) => {
 
   return (
     <div className={DetailStyles.detail}>
-      <Back isShared={true} />
-      <Slider height="235px" more={true} multiple={true} />
+      <div className={DetailStyles.cover}>
+        <Slider height="235px" more={true} multiple={true} />
+        <div className={DetailStyles.share}>
+          <Link href={"/"}>
+            <Image
+              alt="Icono de un corazón"
+              src={"/assets/icon_favorites.svg"}
+              height={20}
+              width={20}
+            />
+          </Link>
+          <div>
+            <button>
+              <Image
+                alt="Icono de compartir"
+                src={"/assets/icon_share.svg"}
+                height={20}
+                width={20}
+              />
+            </button>
+            <button>
+              <Image
+                alt="Icono de un corazón"
+                src={"/assets/icon_favorites.svg"}
+                height={20}
+                width={20}
+              />
+            </button>
+          </div>
+        </div>
+      </div>
       <div className={DetailStyles.body}>
         <h3>Titulo de la habitación</h3>
         <div className={`${DetailStyles.info} ${DetailStyles.flex}`}>
@@ -258,7 +286,7 @@ const Detail = ({ params }: Props) => {
         <h4>Otras habitaciones del mismo establecimiento</h4>
         <section className={DetailStyles.rooms}>
           {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((x) => (
-            <Card multiple={false} key={x} />
+            <Card multiple={false} showInfo={false} key={x} />
           ))}
         </section>
       </div>
