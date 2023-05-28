@@ -8,15 +8,20 @@ const fetchRequest = async (
 ): Promise<ApiResponse> => {
   let response: Response;
   if (method === "GET") {
-    response = await fetch(`${baseurl}/${endpoint}`);
+    response = await fetch(
+      `https://mood-ingalexander94.vercel.app/api/${endpoint}`
+    );
   } else {
-    response = await fetch(`${baseurl}/${endpoint}`, {
-      method,
-      headers: {
-        "Content-type": "application/json",
-      },
-      body: JSON.stringify(data),
-    });
+    response = await fetch(
+      `https://mood-ingalexander94.vercel.app/api/${endpoint}`,
+      {
+        method,
+        headers: {
+          "Content-type": "application/json",
+        },
+        body: JSON.stringify(data),
+      }
+    );
   }
   return response.json();
 };

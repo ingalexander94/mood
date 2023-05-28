@@ -1,6 +1,6 @@
 const withPWA = require("next-pwa")({
   dest: "public",
-  disable: true,
+  disable: false,
 });
 
 /** @type {import('next').NextConfig} */
@@ -10,9 +10,6 @@ const nextConfig = {
   skipTrailingSlashRedirect: true,
   skipMiddlewareUrlNormalize: true,
   reactStrictMode: true,
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
   experimental: {
     appDir: true,
     serverComponentsExternalPackages: ["mongoose"],
@@ -20,7 +17,6 @@ const nextConfig = {
   webpack: (config, { webpack }) => {
     config.experiments = { ...config.experiments, topLevelAwait: true };
     config.plugins.push(new webpack.ContextReplacementPlugin(/.*$/, false));
-
     return config;
   },
   // webpack: (config, _) => {
