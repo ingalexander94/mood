@@ -6,6 +6,7 @@
     "sourceType": "module",
     "project": "./tsconfig.json"
   },
+  "ignorePatterns": ["./worker/index.js"],
   "rules": {
     "max-len": ["error", 140],
     "quotes": [2, "double", { "avoidEscape": true }],
