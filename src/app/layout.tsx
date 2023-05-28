@@ -23,9 +23,7 @@ type InfoResponse = {
 };
 
 async function getInfo(): Promise<InfoResponse> {
-  console.log("env ", process.env.API_URL);
-  const res = await fetchRequest(process.env.API_URL || "", "info");
-  console.log("res ", res);
+  const res = await fetchRequest("info");
   return res.data ?? {};
 }
 
