@@ -29,7 +29,7 @@ const Slider = ({ height, more, multiple }: Props) => {
         <article>
           <Image
             alt="Foto de una habitación"
-            src={"/assets/habitacion-1.jpg"}
+            src={`${process.env.NEXT_PUBLIC_BUCKET_S3}/assets/habitacion-1.jpg`}
             width={0}
             priority={true}
             height={0}

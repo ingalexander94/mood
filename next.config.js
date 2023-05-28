@@ -15,6 +15,14 @@ const nextConfig = {
     plugins: ["web-manifest"],
     serverComponentsExternalPackages: ["mongoose"],
   },
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "public-mood.s3.amazonaws.com",
+      },
+    ],
+  },
   webpack: (config, { webpack }) => {
     config.experiments = { ...config.experiments, topLevelAwait: true };
     config.plugins.push(new webpack.ContextReplacementPlugin(/.*$/, false));
