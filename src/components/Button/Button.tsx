@@ -1,5 +1,5 @@
 import { MouseEventHandler } from "react";
-import ButtonStyles from "./Button.module.css";
+import styles from "./Button.module.css";
 
 interface Props {
   text: string;
@@ -8,7 +8,7 @@ interface Props {
 
 const Button = ({ text, onPressed }: Props) => {
   return (
-    <button onClick={onPressed} className={ButtonStyles.button}>
+    <button onClick={onPressed} className={styles.button}>
       {text}
     </button>
   );

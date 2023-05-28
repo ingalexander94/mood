@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import BackStyle from "./Back.module.css";
+import styles from "./Back.module.css";
 import { useRouter } from "next/navigation";
 
 type Props = {
@@ -14,7 +14,7 @@ const Back = ({ isShared }: Props) => {
   const toBack = () => router.back();
 
   return (
-    <nav className={BackStyle.back}>
+    <nav className={styles.back}>
       <button onClick={toBack}> {"<"} Volver</button>
       {isShared && (
         <div className="share">

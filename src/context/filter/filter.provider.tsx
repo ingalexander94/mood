@@ -1,3 +1,4 @@
+"use client";
 import { useReducer } from "react";
 
 import { FilterContext, filterReducer } from ".";
@@ -7,21 +8,21 @@ export interface FilterState {
   place: Place | null;
   date: Date;
   current: boolean;
-  rooms: any[];
+  results: any[];
 }
-
-const FILTER_INITIAL_STATE: FilterState = {
-  place: null,
-  date: new Date(),
-  current: false,
-  rooms: [],
-};
 
 type Props = {
   children: React.ReactNode;
+  defaultPlace: Place | null;
 };
 
-export const FilterProvider = ({ children }: Props) => {
+function FilterProvider({ children, defaultPlace }: Props) {
+  const FILTER_INITIAL_STATE: FilterState = {
+    place: defaultPlace,
+    date: new Date(),
+    current: false,
+    results: [],
+  };
   const [state, dispatch] = useReducer(filterReducer, FILTER_INITIAL_STATE);
 
   const setPlace = (place: Place) => {
@@ -45,6 +46,19 @@ export const FilterProvider = ({ children }: Props) => {
     });
   };
 
+  const setToday = (current: boolean) => {
+    dispatch({
+      type: "[Filter] - SetToday",
+      payload: current,
+    });
+  };
+
+  const setResults = () => {
+    dispatch({
+      type: "[Filter] - SetResults",
+    });
+  };
+
   return (
     <FilterContext.Provider
       value={{
@@ -52,9 +66,13 @@ export const FilterProvider = ({ children }: Props) => {
         setPlace,
         setDate,
         setHour,
+        setToday,
+        setResults,
       }}
     >
       {children}
     </FilterContext.Provider>
   );
-};
+}
+
+export default FilterProvider;

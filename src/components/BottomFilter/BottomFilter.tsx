@@ -1,8 +1,11 @@
 "use client";
 
+import { useContext } from "react";
 import Image from "next/image";
+import { FilterContext } from "@/context/filter";
 import Button from "../Button/Button";
-import BottomFilterStyles from "./BottomFilter.module.css";
+import styles from "./BottomFilter.module.css";
+import { useRouter } from "next/navigation";
 
 type Props = {
   textButton: string;
@@ -10,12 +13,21 @@ type Props = {
 };
 
 const BottomFilter = ({ textButton, showClear }: Props) => {
+  const router = useRouter();
+
+  const { setResults } = useContext(FilterContext);
+
+  const handleSetResults = () => {
+    setResults();
+    router.push("/");
+  };
+
   return (
-    <div className={BottomFilterStyles.bottomfilter}>
+    <div className={styles.bottomfilter}>
       <ul>
         <li>
           {showClear ? (
-            <button className={BottomFilterStyles.clear}>
+            <button className={styles.clear}>
               <Image
                 alt="Icono de un borrador"
                 src={"/assets/icon_clear.svg"}
@@ -32,7 +44,7 @@ const BottomFilter = ({ textButton, showClear }: Props) => {
           )}
         </li>
         <li>
-          <Button text={textButton} onPressed={() => {}} />
+          <Button text={textButton} onPressed={handleSetResults} />
         </li>
       </ul>
     </div>

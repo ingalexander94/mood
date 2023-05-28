@@ -34,6 +34,7 @@ const PlaceSchema: Schema<IPlace> = new Schema(
 );
 
 PlaceSchema.method("toJSON", function () {
+  // eslint-disable-next-line @typescript-eslint/naming-convention
   const { _id, __v, ...place } = this.toObject();
   place.id = _id;
   return place;

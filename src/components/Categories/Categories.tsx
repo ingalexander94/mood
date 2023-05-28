@@ -1,37 +1,32 @@
 "use client";
 
-import { ICategory } from "@/interfaces/Category.interface";
-import CategoriesStyles from "./Categories.module.css";
+import styles from "./Categories.module.css";
 import Image from "next/image";
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 import { GlobalContext } from "@/context/global";
+import { FilterContext } from "@/context/filter";
 
-interface Props {
-  categories: ICategory[];
-}
-
-const Categories = ({ categories: data }: Props) => {
-  const { categories, indexCategory, loadCategories, activateCategory } =
+const Categories = () => {
+  const { categories, indexCategory, activateCategory } =
     useContext(GlobalContext);
 
-  useEffect(() => {
-    loadCategories(data);
-    return () => {};
-  }, []);
+  const { results } = useContext(FilterContext);
 
   return (
-    <section className={CategoriesStyles.categories}>
-      {/* <article className={CategoriesStyles.info}>
-        <h3>Categorías</h3>
-        <button>Todas las categorías</button>
-      </article> */}
-      <article className={CategoriesStyles.list}>
+    <section className={styles.categories}>
+      {(!results || !results.length) && (
+        <article className={styles.info}>
+          <h3>Categorías</h3>
+          <button>Todas las categorías</button>
+        </article>
+      )}
+      <article className={styles.list}>
         <ul>
           {categories &&
             categories.map(({ id, name, icon }, i) => (
               <li
                 onClick={() => activateCategory(i)}
-                className={i === indexCategory ? CategoriesStyles.active : ""}
+                className={i === indexCategory ? styles.active : ""}
                 key={id.toString()}
               >
                 <Image

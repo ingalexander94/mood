@@ -1,12 +1,12 @@
 import Image from "next/image";
-import HeaderStyles from "./Header.module.css";
+import styles from "./Header.module.css";
 import Link from "next/link";
 
 const Header = () => {
   return (
-    <header className={HeaderStyles.header}>
-      <div className={HeaderStyles.filter}>
-        <Link className={HeaderStyles.search} href={"/reservar"}>
+    <header className={styles.header}>
+      <div className={styles.filter}>
+        <Link className={styles.search} href={"/reservar"}>
           <div>
             <Image
               alt="Icono de ubicación"
@@ -20,7 +20,7 @@ const Header = () => {
             </div>
           </div>
         </Link>
-        <Link className={HeaderStyles.more} href={"/"}>
+        <Link className={styles.more} href={"/"}>
           <Image
             alt="Icono de filtros"
             src={"/assets/icon_filter.svg"}

@@ -1,7 +1,7 @@
-import MotelsStyles from "./Motels.module.css";
+import styles from "./Motels.module.css";
 
 const Motels = () => {
-  return <div className={MotelsStyles.center}>Moteles</div>;
+  return <div className={styles.center}>Moteles</div>;
 };
 
 export default Motels;

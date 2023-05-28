@@ -1,8 +1,8 @@
-import PromotionStyles from "./Promotion.module.css";
+import styles from "./Promotion.module.css";
 
 const Promotion = () => {
   return (
-    <article className={PromotionStyles.promotion}>
+    <article className={styles.promotion}>
       <p>Promoción por amanecida</p>
       <p>
         <span>$60.000</span>

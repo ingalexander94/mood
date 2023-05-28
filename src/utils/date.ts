@@ -1,17 +1,14 @@
 import dayjs from "dayjs";
+import "dayjs/locale/es";
+dayjs.locale("es");
 
 const formateDate = (date: Date) => dayjs(date).format("YYYY-MM-DD");
 
 const formatHour = (date: Date) => dayjs(date).format("HH:mm");
 
-const updateDate = (current: Date, select: string): Date => {
-  const original = dayjs(current);
+const updateDate = (select: string): Date => {
   const update = dayjs(select);
-  const newDate = original
-    .set("day", update.get("day"))
-    .set("month", update.get("month"))
-    .set("year", update.get("year"));
-  return newDate.toDate();
+  return update.toDate();
 };
 
 const updateHour = (current: Date, select: string): Date => {
@@ -23,4 +20,8 @@ const updateHour = (current: Date, select: string): Date => {
   return newDate.toDate();
 };
 
-export { formateDate, formatHour, updateDate, updateHour };
+const showDate = (date: Date) => dayjs(date).format("dddd D MMMM, YYYY");
+
+const showHour = (date: Date) => dayjs(date).format("h:mm A");
+
+export { formateDate, formatHour, updateDate, updateHour, showDate, showHour };

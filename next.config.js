@@ -7,6 +7,8 @@ const withPWA = require("next-pwa")({
 const nextConfig = {
   output: "standalone",
   swcMinify: true,
+  skipTrailingSlashRedirect: true,
+  skipMiddlewareUrlNormalize: true,
   reactStrictMode: true,
   experimental: {
     appDir: true,
@@ -16,9 +18,6 @@ const nextConfig = {
   webpack: (config, { webpack }) => {
     config.experiments = { ...config.experiments, topLevelAwait: true };
     config.plugins.push(new webpack.ContextReplacementPlugin(/.*$/, false));
-    config.performance = {
-      hints: false,
-    };
 
     return config;
   },

@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import CardStyles from "./Card.module.css";
+import styles from "./Card.module.css";
 import Button from "@/components/Button/Button";
 import { useRouter } from "next/navigation";
 import Slider from "../Slider/Slider";
@@ -17,7 +17,7 @@ const Card = ({ multiple, showInfo }: Props) => {
   const navigateToDetail = () => router.push(`/${1}`);
 
   return (
-    <article className={CardStyles.card}>
+    <article className={styles.card}>
       <button>
         <Image
           alt="Icono de un corazón"
@@ -27,10 +27,10 @@ const Card = ({ multiple, showInfo }: Props) => {
         />
       </button>
       <Slider height="190px" more={false} multiple={multiple} />
-      <div className={CardStyles.body}>
+      <div className={styles.body}>
         <div
-          className={`${CardStyles.title} ${CardStyles.flex} ${
-            !showInfo ? CardStyles.row : ""
+          className={`${styles.title} ${styles.flex} ${
+            !showInfo ? styles.row : ""
           }`}
         >
           <h3>Titulo de la habitación</h3>
@@ -45,7 +45,7 @@ const Card = ({ multiple, showInfo }: Props) => {
           </p>
         </div>
         {showInfo && (
-          <div className={`${CardStyles.info} ${CardStyles.flex}`}>
+          <div className={`${styles.info} ${styles.flex}`}>
             <div>
               <Image
                 alt="Foto del motel"
@@ -58,7 +58,7 @@ const Card = ({ multiple, showInfo }: Props) => {
             <p>Aquí colocamos una descripción breve de la habitación</p>
           </div>
         )}
-        <div className={`${CardStyles.details} ${CardStyles.flex}`}>
+        <div className={`${styles.details} ${styles.flex}`}>
           <div>
             <h4>$120.000</h4>
             <p>Por 3 horas</p>

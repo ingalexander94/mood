@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import BottombarStyles from "./Bottombar.module.css";
+import styles from "./Bottombar.module.css";
 import { Route, Routes } from "@/interfaces/Routes.interface";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
@@ -17,13 +17,10 @@ const Bottombar = () => {
   ];
 
   return (
-    <nav className={BottombarStyles.bottombar}>
+    <nav className={styles.bottombar}>
       <ul>
         {pathNames.map(({ name, path, icon }) => (
-          <li
-            key={path}
-            className={pathname === path ? BottombarStyles.active : ""}
-          >
+          <li key={path} className={pathname === path ? styles.active : ""}>
             <Link href={path}>
               <Image
                 alt={`Icono de ${name}`}
@@ -39,8 +36,8 @@ const Bottombar = () => {
           <div
             className={
               pathNames.find(({ path }) => path == pathname)
-                ? BottombarStyles.show
-                : BottombarStyles.hide
+                ? styles.show
+                : styles.hide
             }
           ></div>
         }

@@ -1,18 +1,18 @@
 import Image from "next/image";
-import DetailStyles from "./Detail.module.css";
+import styles from "./Detail.module.css";
 import { Amenity, AmenityModel } from "@/interfaces/amenities.interface";
 import Promotion from "@/components/Promotion/Promotion";
 import Card from "@/components/Card/Card";
 import Slider from "@/components/Slider/Slider";
 import Link from "next/link";
 
-type Props = {
-  params?: {
-    id?: string;
-  };
-};
+// type Props = {
+//   params?: {
+//     id?: string;
+//   };
+// };
 
-const Detail = ({ params }: Props) => {
+const Detail = () => {
   const amenities: Amenity[] = [
     AmenityModel.TV,
     AmenityModel.SNACK,
@@ -26,10 +26,10 @@ const Detail = ({ params }: Props) => {
   ];
 
   return (
-    <div className={DetailStyles.detail}>
-      <div className={DetailStyles.cover}>
+    <div className={styles.detail}>
+      <div className={styles.cover}>
         <Slider height="235px" more={true} multiple={true} />
-        <div className={DetailStyles.share}>
+        <div className={styles.share}>
           <Link href={"/"}>
             <Image
               alt="Icono de un corazón"
@@ -58,15 +58,15 @@ const Detail = ({ params }: Props) => {
           </div>
         </div>
       </div>
-      <div className={DetailStyles.body}>
+      <div className={styles.body}>
         <h3>Titulo de la habitación</h3>
-        <div className={`${DetailStyles.info} ${DetailStyles.flex}`}>
-          <p className={DetailStyles.star}>4/5</p>
-          <p className={`${DetailStyles.comments} ${DetailStyles.underline}`}>
+        <div className={`${styles.info} ${styles.flex}`}>
+          <p className={styles.star}>4/5</p>
+          <p className={`${styles.comments} ${styles.underline}`}>
             203 opiniones
           </p>
         </div>
-        <p className={`${DetailStyles.ubication} ${DetailStyles.underline}`}>
+        <p className={`${styles.ubication} ${styles.underline}`}>
           Cúcuta, Norte de Santander, Colombia
         </p>
         <hr />
@@ -86,7 +86,7 @@ const Detail = ({ params }: Props) => {
         </ul>
         <hr />
         <h4>Calificaciones</h4>
-        <div className={DetailStyles.califications}>
+        <div className={styles.califications}>
           <span>4/5</span>
           <ul>
             <li>
@@ -134,13 +134,11 @@ const Detail = ({ params }: Props) => {
         <p>Basándonos 203 opiniones de usuarios verificados.</p>
         <hr />
         <h4>El lugar que visitarás</h4>
-        <p className={DetailStyles.underline}>
-          Cúcuta, Norte de Santander, Colombia
-        </p>
+        <p className={styles.underline}>Cúcuta, Norte de Santander, Colombia</p>
         <hr />
         <h4>Acerca del lugar</h4>
-        <div className={DetailStyles.motel}>
-          <div className={DetailStyles.avatar}>
+        <div className={styles.motel}>
+          <div className={styles.avatar}>
             <Image
               alt="Foto del motel"
               src={"/assets/Icon_user.svg"}
@@ -150,7 +148,7 @@ const Detail = ({ params }: Props) => {
             <h5>Nombre del Motel</h5>
           </div>
           <div>
-            <span className={DetailStyles.star}>5/5</span>
+            <span className={styles.star}>5/5</span>
             <p>Calificaciones</p>
             <hr />
             <span>4</span>
@@ -160,7 +158,7 @@ const Detail = ({ params }: Props) => {
             <p>Habitaciones disponibles</p>
           </div>
         </div>
-        <ul className={DetailStyles.about}>
+        <ul className={styles.about}>
           <li>
             <Image
               alt="Icono de"
@@ -215,7 +213,7 @@ const Detail = ({ params }: Props) => {
           reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
           pariatur.
         </p>
-        <div className={`${DetailStyles.profile} ${DetailStyles.flex}`}>
+        <div className={`${styles.profile} ${styles.flex}`}>
           <button>Dejar un mensaje</button>
           <Link href={"/moteles"}>Ver el perfil</Link>
         </div>
@@ -227,7 +225,7 @@ const Detail = ({ params }: Props) => {
         </p>
         <hr />
         <h4>Promociones del día para esta habitación</h4>
-        <section className={DetailStyles.promotions}>
+        <section className={styles.promotions}>
           {[1, 2, 3, 4, 5].map((x) => (
             <Promotion key={x} />
           ))}
@@ -284,7 +282,7 @@ const Detail = ({ params }: Props) => {
         </ul>
         <hr />
         <h4>Otras habitaciones del mismo establecimiento</h4>
-        <section className={DetailStyles.rooms}>
+        <section className={styles.rooms}>
           {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((x) => (
             <Card multiple={false} showInfo={false} key={x} />
           ))}

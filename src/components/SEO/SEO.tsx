@@ -1,6 +1,8 @@
+import Head from "next/head";
+
 const SEO = () => {
   return (
-    <head>
+    <Head>
       <meta name="author" content="Deloreans" />
       <meta
         name="description"
@@ -41,7 +43,7 @@ const SEO = () => {
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
       />
-    </head>
+    </Head>
   );
 };
 

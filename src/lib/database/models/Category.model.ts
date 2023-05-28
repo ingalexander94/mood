@@ -26,6 +26,7 @@ const CategorySchema: Schema<ICategory> = new Schema(
 );
 
 CategorySchema.method("toJSON", function () {
+  // eslint-disable-next-line @typescript-eslint/naming-convention
   const { _id, __v, ...category } = this.toObject();
   category.id = _id;
   return category;

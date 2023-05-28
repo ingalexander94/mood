@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import SliderStyles from "./Slider.module.css";
+import styles from "./Slider.module.css";
 import { useState, UIEvent } from "react";
 import { Timer } from "@/utils/timer";
 
@@ -21,16 +21,17 @@ const Slider = ({ height, more, multiple }: Props) => {
   }, 5);
 
   return (
-    <div className={SliderStyles.slider} style={{ height }}>
+    <div className={styles.slider} style={{ height }}>
       <section
         onScroll={handleScroll}
-        className={!multiple ? SliderStyles.unique : ""}
+        className={!multiple ? styles.unique : ""}
       >
         <article>
           <Image
             alt="Foto de una habitación"
             src={"/assets/habitacion-1.jpg"}
             width={0}
+            priority={true}
             height={0}
             sizes="100%"
             style={{ width: "100%" }}
@@ -62,7 +63,7 @@ const Slider = ({ height, more, multiple }: Props) => {
           {[1, 2, 3].map((x, i) => (
             <span
               key={x}
-              className={currentIndex === i ? SliderStyles.active : ""}
+              className={currentIndex === i ? styles.active : ""}
             ></span>
           ))}
         </div>

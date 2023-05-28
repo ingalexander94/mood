@@ -14,6 +14,13 @@ type FilterActionType =
   | {
       type: "[Filter] - SetHour";
       payload: string;
+    }
+  | {
+      type: "[Filter] - SetToday";
+      payload: boolean;
+    }
+  | {
+      type: "[Filter] - SetResults";
     };
 
 export const filterReducer = (
@@ -29,12 +36,23 @@ export const filterReducer = (
     case "[Filter] - SetDate":
       return {
         ...state,
-        date: formatter.updateDate(state.date, action.payload),
+        date: formatter.updateDate(action.payload),
       };
     case "[Filter] - SetHour":
       return {
         ...state,
         date: formatter.updateHour(state.date, action.payload),
+      };
+    case "[Filter] - SetToday":
+      return {
+        ...state,
+        date: new Date(),
+        current: action.payload,
+      };
+    case "[Filter] - SetResults":
+      return {
+        ...state,
+        results: [1, 2, 3, 4, 5, 6],
       };
     default:
       return state;

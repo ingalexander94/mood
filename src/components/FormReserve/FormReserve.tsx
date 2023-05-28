@@ -1,40 +1,27 @@
 "use client";
 
 import Image from "next/image";
-import FormReserveStyles from "./FormReserve.module.css";
-import { useContext, useEffect, useRef } from "react";
-import { IPlace } from "@/interfaces/Place.interface";
+import styles from "./FormReserve.module.css";
+import { useContext, useRef } from "react";
 import { GlobalContext } from "@/context/global";
 import { FilterContext } from "@/context/filter";
 import * as formatter from "@/utils/date";
 
-interface Props {
-  places: IPlace[];
-}
-
-const FormReserve = ({ places: data }: Props) => {
-  const { places, loadPlaces } = useContext(GlobalContext);
+const FormReserve = () => {
+  const { places } = useContext(GlobalContext);
   const {
     place: active,
     date,
     setPlace,
     setHour,
     setDate,
+    setToday,
   } = useContext(FilterContext);
-  const input = useRef<HTMLInputElement>(null);
-
-  useEffect(() => {
-    loadPlaces(data);
-    if (data.length) {
-      const { name, photo, latitude, longitude } = data[0];
-      setPlace({ name, photo, latitude, longitude });
-    }
-    return () => {};
-  }, [data]);
+  const inputSearch = useRef<HTMLInputElement>(null);
 
   const handleFocus = () => {
     setTimeout(() => {
-      input.current?.focus();
+      inputSearch.current?.focus();
     }, 100);
   };
 
@@ -46,8 +33,10 @@ const FormReserve = ({ places: data }: Props) => {
   const handleSetHour = (e: React.ChangeEvent<HTMLInputElement>) =>
     setHour(e.target.value);
 
+  const handleSetNow = (current: boolean) => setToday(current);
+
   return (
-    <section className={FormReserveStyles.wrapper}>
+    <section className={styles.wrapper}>
       <input type="checkbox" name="search" id="search" />
       <label htmlFor="search">
         <Image
@@ -59,7 +48,7 @@ const FormReserve = ({ places: data }: Props) => {
         <span>Filtros</span>
       </label>
 
-      <div className={FormReserveStyles.search}>
+      <div className={styles.search}>
         <article>
           <label>
             <Image
@@ -73,7 +62,7 @@ const FormReserve = ({ places: data }: Props) => {
               placeholder="Escribe tu destino"
               name=""
               id=""
-              ref={input}
+              ref={inputSearch}
             />
           </label>
           <ul>
@@ -136,20 +125,21 @@ const FormReserve = ({ places: data }: Props) => {
         </article>
       </div>
 
-      <div className={FormReserveStyles.filter}>
+      <div className={styles.filter}>
         <article>
           <label htmlFor="search" onClick={handleFocus}>
-            <div className={FormReserveStyles.type}>
+            <div className={styles.type}>
               <Image
                 src={"./assets/icon_search.svg"}
                 alt="Icono de buscar"
                 height={20}
                 width={20}
               />
-              <span className={FormReserveStyles.full}>¿Dónde quieres ir?</span>
+              <span className={styles.full}>¿Dónde?</span>
             </div>
+            <p>{active?.name ?? ""}</p>
           </label>
-          <div className={FormReserveStyles.places}>
+          <div className={styles.places}>
             <ul>
               {places &&
                 places.map(({ id, name, photo, latitude, longitude }, i) => (
@@ -158,9 +148,7 @@ const FormReserve = ({ places: data }: Props) => {
                     onClick={() =>
                       handleSetPlace({ name, photo, latitude, longitude })
                     }
-                    className={
-                      name === active?.name ? FormReserveStyles.active : ""
-                    }
+                    className={name === active?.name ? styles.active : ""}
                   >
                     <Image
                       src={photo}
@@ -175,9 +163,9 @@ const FormReserve = ({ places: data }: Props) => {
           </div>
         </article>
         <article>
-          <input type="radio" name="filter" id="filter2" />
+          <input type="checkbox" name="filter" id="filter2" />
           <label htmlFor="filter2">
-            <div className={FormReserveStyles.type}>
+            <div className={styles.type}>
               <Image
                 src={"./assets/icon_calendar.svg"}
                 alt="Icono de buscar"
@@ -186,9 +174,10 @@ const FormReserve = ({ places: data }: Props) => {
               />
               <span>¿Cuándo?</span>
             </div>
-            <div className={FormReserveStyles.actions}>
-              <button>En camino</button>
-              <button>Hoy</button>
+            <p>{formatter.showDate(date)}</p>
+            <div className={styles.actions}>
+              <button onClick={() => handleSetNow(true)}>En camino</button>
+              <button onClick={() => handleSetNow(false)}>Hoy</button>
             </div>
           </label>
           <div>
@@ -202,9 +191,9 @@ const FormReserve = ({ places: data }: Props) => {
           </div>
         </article>
         <article>
-          <input type="radio" name="filter" id="filter3" />
+          <input type="checkbox" name="filter" id="filter3" />
           <label htmlFor="filter3">
-            <div className={FormReserveStyles.type}>
+            <div className={styles.type}>
               <Image
                 src={"./assets/icon_reloj.svg"}
                 alt="Icono de buscar"
@@ -213,6 +202,7 @@ const FormReserve = ({ places: data }: Props) => {
               />
               <span>Hora de llegada</span>
             </div>
+            <p>{formatter.showHour(date)}</p>
           </label>
           <div>
             <input

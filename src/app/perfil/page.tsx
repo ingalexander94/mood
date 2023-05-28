@@ -1,7 +1,7 @@
-import ProfileStyles from "./Profile.module.css";
+import styles from "./Profile.module.css";
 
 const Profile = () => {
-  return <div className={ProfileStyles.center}>Perfil</div>;
+  return <div className={styles.center}>Perfil</div>;
 };
 
 export default Profile;

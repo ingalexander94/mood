@@ -18,7 +18,7 @@ const fetchRequest = async (
       body: JSON.stringify(data),
     });
   }
-  return await response.json();
+  return response.json();
 };
 
 export { fetchRequest };
