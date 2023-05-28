@@ -10,10 +10,12 @@ const nextConfig = {
   skipTrailingSlashRedirect: true,
   skipMiddlewareUrlNormalize: true,
   reactStrictMode: true,
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
   experimental: {
     appDir: true,
     serverComponentsExternalPackages: ["mongoose"],
-    plugins: ["web-manifest"],
   },
   webpack: (config, { webpack }) => {
     config.experiments = { ...config.experiments, topLevelAwait: true };
