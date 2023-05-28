@@ -5,11 +5,11 @@ import { ICategory } from "@/interfaces/Category.interface";
 const getCategories = async (all: boolean): Promise<ICategory[]> => {
   let categories: ICategory[] = [];
   try {
-    db.connect();
+    await db.connect();
     categories = all
       ? await Category.find()
       : await Category.find({ state: true }).select("-state");
-    db.disconnect();
+    await db.disconnect();
   } catch (error) {
     console.error(error);
   }

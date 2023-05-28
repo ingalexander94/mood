@@ -5,11 +5,11 @@ import { IPlace } from "@/interfaces/Place.interface";
 const getPlaces = async (all: boolean): Promise<IPlace[]> => {
   let places: IPlace[] = [];
   try {
-    db.connect();
+    await db.connect();
     places = all
       ? await Place.find()
       : await Place.find({ state: true }).select("-state");
-    db.disconnect();
+    await db.disconnect();
   } catch (error) {
     console.error(error);
   }
