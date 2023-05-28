@@ -8,7 +8,11 @@ const fetchRequest = async (
 ): Promise<ApiResponse> => {
   let response: Response;
   if (method === "GET") {
-    response = await fetch(`${baseurl}/${endpoint}`);
+    response = await fetch(`${baseurl}/${endpoint}`, {
+      headers: {
+        "Content-type": "application/json",
+      },
+    });
   } else {
     response = await fetch(`${baseurl}/${endpoint}`, {
       method,
@@ -18,6 +22,7 @@ const fetchRequest = async (
       body: JSON.stringify(data),
     });
   }
+  console.log("sisiis", response);
   return response.json();
 };
 

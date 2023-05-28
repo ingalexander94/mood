@@ -9,11 +9,9 @@ const getCategories = async (all: boolean): Promise<ICategory[]> => {
     categories = all
       ? await Category.find()
       : await Category.find({ state: true }).select("-state");
-    console.log("categorias ", categories);
-
     await db.disconnect();
   } catch (error) {
-    console.error("el errror es: ", error);
+    console.error("el error es: ", error);
   }
   return categories;
 };
