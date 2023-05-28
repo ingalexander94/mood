@@ -7,8 +7,7 @@ const fetchRequest = async (
 ): Promise<ApiResponse> => {
   let response: Response;
   if (method === "GET") {
-    response = await fetch(`/api/${endpoint}`, {
-      cache: "no-store",
+    response = await fetch(process.env.API_URL + `/api/${endpoint}`, {
       headers: {
         "Content-type": "application/json",
       },
