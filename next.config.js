@@ -12,6 +12,7 @@ const nextConfig = {
   reactStrictMode: true,
   experimental: {
     appDir: true,
+    plugins: ["web-manifest"],
     serverComponentsExternalPackages: ["mongoose"],
   },
   webpack: (config, { webpack }) => {

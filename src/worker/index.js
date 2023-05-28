@@ -1,4 +1,3 @@
-/* eslint-disable import/no-extraneous-dependencies */
 import { skipWaiting, clientsClaim } from "workbox-core";
 import { ExpirationPlugin } from "workbox-expiration";
 import {
