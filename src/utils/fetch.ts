@@ -8,6 +8,7 @@ const fetchRequest = async (
   let response: Response;
   if (method === "GET") {
     response = await fetch(`/api/${endpoint}`, {
+      cache: "no-store",
       headers: {
         "Content-type": "application/json",
       },
