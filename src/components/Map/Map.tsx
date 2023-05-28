@@ -12,7 +12,7 @@ const MapView = () => {
   useLayoutEffect(() => {
     const map = new Map({
       container: mapSection.current!,
-      style: "mapbox://styles/mapbox/streets-v12",
+      style: "mapbox://styles/mapbox/light-v11",
       center: [-72.5045468, 7.896744],
       zoom: 16,
     });
