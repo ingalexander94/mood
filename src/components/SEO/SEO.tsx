@@ -1,8 +1,7 @@
-import Head from "next/head";
-
 const SEO = () => {
   return (
-    <Head>
+    // eslint-disable-next-line @next/next/no-head-element
+    <head>
       <meta name="author" content="Deloreans" />
       <meta
         name="description"
@@ -43,7 +42,7 @@ const SEO = () => {
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
       />
-    </Head>
+    </head>
   );
 };
 
