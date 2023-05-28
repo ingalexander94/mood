@@ -10,7 +10,7 @@ const Header = () => {
           <div>
             <Image
               alt="Icono de ubicación"
-              src={"/assets/icon_ubication.svg"}
+              src={`${process.env.NEXT_PUBLIC_BUCKET_S3}/assets/icons/icon_ubication.svg`}
               width={25}
               height={25}
             />
@@ -23,7 +23,7 @@ const Header = () => {
         <Link className={styles.more} href={"/"}>
           <Image
             alt="Icono de filtros"
-            src={"/assets/icon_filter.svg"}
+            src={`${process.env.NEXT_PUBLIC_BUCKET_S3}/assets/icons/icon_filter.svg`}
             width={37}
             height={37}
           />

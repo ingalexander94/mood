@@ -1,42 +1,42 @@
 [
   {
     "name": "Populares",
-    "icon": "/assets/icon_popular.svg",
+    "icon": "/assets/icons/icon_popular.svg",
     "state": true
   },
   {
     "name": "El más cercano",
-    "icon": "/assets/icon_closest.svg",
+    "icon": "/assets/icons/icon_closest.svg",
     "state": true
   },
   {
     "name": "Top 10",
-    "icon": "/assets/icon_star.svg",
+    "icon": "/assets/icons/icon_star.svg",
     "state": true
   },
   {
     "name": "Promociones",
-    "icon": "/assets/icon_promotions.svg",
+    "icon": "/assets/icons/icon_promotions.svg",
     "state": true
   },
   {
     "name": "Motel de la semana",
-    "icon": "/assets/icon_week.svg",
+    "icon": "/assets/icons/icon_week.svg",
     "state": true
   },
   {
     "name": "Más recientes",
-    "icon": "/assets/icon_recent.svg",
+    "icon": "/assets/icons/icon_recent.svg",
     "state": true
   },
   {
     "name": "Temáticos",
-    "icon": "/assets/icon_thematic.svg",
+    "icon": "/assets/icons/icon_thematic.svg",
     "state": true
   },
   {
     "name": "Con parqueadero",
-    "icon": "/assets/icon_parking.svg",
+    "icon": "/assets/icons/icon_parking.svg",
     "state": true
   }
 ]

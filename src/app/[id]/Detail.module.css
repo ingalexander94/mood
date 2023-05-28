@@ -65,7 +65,7 @@
   position: absolute;
   width: 20px;
   height: 20px;
-  background-image: url("../../../public/assets/icon_ubication.svg");
+  background-image: url("https://public-mood.s3.amazonaws.com/assets/icons/icon_ubication.svg");
   background-size: contain;
   background-repeat: no-repeat;
   left: 0;
@@ -95,7 +95,7 @@
   position: absolute;
   width: 25px;
   height: 25px;
-  background-image: url("../../../public/assets/icon_comment.svg");
+  background-image: url("https://public-mood.s3.amazonaws.com/assets/icons/icon_comment.svg");
   background-size: contain;
   background-repeat: no-repeat;
   left: -30px;
@@ -107,7 +107,7 @@
   position: absolute;
   width: 25px;
   height: 25px;
-  background-image: url("../../../public/assets/icon_star_orange.svg");
+  background-image: url("https://public-mood.s3.amazonaws.com/assets/icons/icon_star_orange.svg");
   background-size: contain;
   background-repeat: no-repeat;
   left: -22px;
@@ -185,7 +185,7 @@
   position: absolute;
   width: 20px;
   height: 20px;
-  background-image: url("../../../public/assets/icon_star_black.svg");
+  background-image: url("https://public-mood.s3.amazonaws.com/assets/icons/icon_star_black.svg");
   background-size: contain;
   background-repeat: no-repeat;
   right: -25px;

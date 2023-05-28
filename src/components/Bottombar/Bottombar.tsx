@@ -24,7 +24,9 @@ const Bottombar = () => {
             <Link href={path}>
               <Image
                 alt={`Icono de ${name}`}
-                src={`/assets/${pathname === path ? "active_" : ""}${icon}`}
+                src={`${process.env.NEXT_PUBLIC_BUCKET_S3}/assets/icons/${
+                  pathname === path ? "active_" : ""
+                }${icon}`}
                 width={30}
                 height={30}
               />

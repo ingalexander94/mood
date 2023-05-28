@@ -33,7 +33,7 @@ const Detail = () => {
           <Link href={"/"}>
             <Image
               alt="Icono de un corazón"
-              src={"/assets/icon_favorites.svg"}
+              src={`${process.env.NEXT_PUBLIC_BUCKET_S3}/assets/icons/icon_favorites.svg`}
               height={20}
               width={20}
             />
@@ -42,7 +42,7 @@ const Detail = () => {
             <button>
               <Image
                 alt="Icono de compartir"
-                src={"/assets/icon_share.svg"}
+                src={`${process.env.NEXT_PUBLIC_BUCKET_S3}/assets/icons/icon_share.svg`}
                 height={20}
                 width={20}
               />
@@ -50,7 +50,7 @@ const Detail = () => {
             <button>
               <Image
                 alt="Icono de un corazón"
-                src={"/assets/icon_favorites.svg"}
+                src={`${process.env.NEXT_PUBLIC_BUCKET_S3}/assets/icons/icon_favorites.svg`}
                 height={20}
                 width={20}
               />
@@ -76,7 +76,7 @@ const Detail = () => {
             <li key={+id}>
               <Image
                 alt={`Foto de ${name}`}
-                src={`/assets/${icon}`}
+                src={`${process.env.NEXT_PUBLIC_BUCKET_S3}/assets/icons/${icon}`}
                 width={25}
                 height={25}
               />
@@ -92,7 +92,7 @@ const Detail = () => {
             <li>
               <Image
                 alt="Icono de estrella"
-                src={"/assets/icon_star_black.svg"}
+                src={`${process.env.NEXT_PUBLIC_BUCKET_S3}/assets/icons/icon_star_black.svg`}
                 width={25}
                 height={25}
               />
@@ -100,7 +100,7 @@ const Detail = () => {
             <li>
               <Image
                 alt="Icono de estrella"
-                src={"/assets/icon_star_black.svg"}
+                src={`${process.env.NEXT_PUBLIC_BUCKET_S3}/assets/icons/icon_star_black.svg`}
                 width={25}
                 height={25}
               />
@@ -108,7 +108,7 @@ const Detail = () => {
             <li>
               <Image
                 alt="Icono de estrella"
-                src={"/assets/icon_star_black.svg"}
+                src={`${process.env.NEXT_PUBLIC_BUCKET_S3}/assets/icons/icon_star_black.svg`}
                 width={25}
                 height={25}
               />
@@ -116,7 +116,7 @@ const Detail = () => {
             <li>
               <Image
                 alt="Icono de estrella"
-                src={"/assets/icon_star_black.svg"}
+                src={`${process.env.NEXT_PUBLIC_BUCKET_S3}/assets/icons/icon_star_black.svg`}
                 width={25}
                 height={25}
               />
@@ -124,7 +124,7 @@ const Detail = () => {
             <li>
               <Image
                 alt="Icono de estrella"
-                src={"/assets/icon_star.svg"}
+                src={`${process.env.NEXT_PUBLIC_BUCKET_S3}/assets/icons/icon_star.svg`}
                 width={25}
                 height={25}
               />
@@ -141,7 +141,7 @@ const Detail = () => {
           <div className={styles.avatar}>
             <Image
               alt="Foto del motel"
-              src={"/assets/Icon_user.svg"}
+              src={`${process.env.NEXT_PUBLIC_BUCKET_S3}/assets/icons/Icon_user.svg`}
               width={100}
               height={100}
             />
@@ -162,7 +162,7 @@ const Detail = () => {
           <li>
             <Image
               alt="Icono de"
-              src={"/assets/icon_recent.svg"}
+              src={`${process.env.NEXT_PUBLIC_BUCKET_S3}/assets/icons/icon_recent.svg`}
               width={25}
               height={25}
             />
@@ -171,7 +171,7 @@ const Detail = () => {
           <li>
             <Image
               alt="Icono de"
-              src={"/assets/icon_room.svg"}
+              src={`${process.env.NEXT_PUBLIC_BUCKET_S3}/assets/icons/icon_room.svg`}
               width={25}
               height={25}
             />
@@ -183,7 +183,7 @@ const Detail = () => {
           <li>
             <Image
               alt="Icono de"
-              src={"/assets/icon_room.svg"}
+              src={`${process.env.NEXT_PUBLIC_BUCKET_S3}/assets/icons/icon_room.svg`}
               width={25}
               height={25}
             />
@@ -195,7 +195,7 @@ const Detail = () => {
           <li>
             <Image
               alt="Icono de"
-              src={"/assets/icon_room.svg"}
+              src={`${process.env.NEXT_PUBLIC_BUCKET_S3}/assets/icons/icon_room.svg`}
               width={25}
               height={25}
             />
@@ -236,7 +236,7 @@ const Detail = () => {
           <li>
             <Image
               alt="Icono de"
-              src={"/assets/icon_recent.svg"}
+              src={`${process.env.NEXT_PUBLIC_BUCKET_S3}/assets/icons/icon_recent.svg`}
               width={25}
               height={25}
             />
@@ -249,7 +249,7 @@ const Detail = () => {
           <li>
             <Image
               alt="Icono de"
-              src={"/assets/icon_money.svg"}
+              src={`${process.env.NEXT_PUBLIC_BUCKET_S3}/assets/icons/icon_money.svg`}
               width={25}
               height={25}
             />
@@ -258,7 +258,7 @@ const Detail = () => {
           <li>
             <Image
               alt="Icono de"
-              src={"/assets/icon_channels.svg"}
+              src={`${process.env.NEXT_PUBLIC_BUCKET_S3}/assets/icons/icon_channels.svg`}
               width={25}
               height={25}
             />
@@ -270,7 +270,7 @@ const Detail = () => {
           <li>
             <Image
               alt="Icono de"
-              src={"/assets/icon_room_black.svg"}
+              src={`${process.env.NEXT_PUBLIC_BUCKET_S3}/assets/icons/icon_room_black.svg`}
               width={25}
               height={25}
             />

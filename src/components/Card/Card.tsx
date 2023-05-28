@@ -21,7 +21,7 @@ const Card = ({ multiple, showInfo }: Props) => {
       <button>
         <Image
           alt="Icono de un corazón"
-          src={"/assets/icon_favorites.svg"}
+          src={`${process.env.NEXT_PUBLIC_BUCKET_S3}/assets/icons/icon_favorites.svg`}
           height={20}
           width={20}
         />
@@ -37,7 +37,7 @@ const Card = ({ multiple, showInfo }: Props) => {
           <p>
             <Image
               alt="Icono de estrella"
-              src={"/assets/icon_star.svg"}
+              src={`${process.env.NEXT_PUBLIC_BUCKET_S3}/assets/icons/icon_star.svg`}
               width={25}
               height={25}
             />
@@ -49,7 +49,7 @@ const Card = ({ multiple, showInfo }: Props) => {
             <div>
               <Image
                 alt="Foto del motel"
-                src={"/assets/Icon_user.svg"}
+                src={`${process.env.NEXT_PUBLIC_BUCKET_S3}/assets/icons/Icon_user.svg`}
                 width={30}
                 height={30}
               />

@@ -40,7 +40,7 @@ const FormReserve = () => {
       <input type="checkbox" name="search" id="search" />
       <label htmlFor="search">
         <Image
-          src={"./assets/icon_filter.svg"}
+          src={`${process.env.NEXT_PUBLIC_BUCKET_S3}/assets/icons/icon_filter.svg`}
           alt="Icono de filtros"
           width={25}
           height={25}
@@ -52,7 +52,7 @@ const FormReserve = () => {
         <article>
           <label>
             <Image
-              src={"./assets/icon_search.svg"}
+              src={`${process.env.NEXT_PUBLIC_BUCKET_S3}/assets/icons/icon_search.svg`}
               alt="Icono de buscar"
               height={20}
               width={20}
@@ -69,7 +69,7 @@ const FormReserve = () => {
             <li>
               <div>
                 <Image
-                  src={"./assets/icon_ubication.svg"}
+                  src={`${process.env.NEXT_PUBLIC_BUCKET_S3}/assets/icons/icon_ubication.svg`}
                   alt="Icono de buscar"
                   height={20}
                   width={20}
@@ -80,7 +80,7 @@ const FormReserve = () => {
             <li>
               <div>
                 <Image
-                  src={"./assets/icon_ubication.svg"}
+                  src={`${process.env.NEXT_PUBLIC_BUCKET_S3}/assets/icons/icon_ubication.svg`}
                   alt="Icono de buscar"
                   height={20}
                   width={20}
@@ -91,7 +91,7 @@ const FormReserve = () => {
             <li>
               <div>
                 <Image
-                  src={"./assets/icon_ubication.svg"}
+                  src={`${process.env.NEXT_PUBLIC_BUCKET_S3}/assets/icons/icon_ubication.svg`}
                   alt="Icono de buscar"
                   height={20}
                   width={20}
@@ -102,7 +102,7 @@ const FormReserve = () => {
             <li>
               <div>
                 <Image
-                  src={"./assets/icon_ubication.svg"}
+                  src={`${process.env.NEXT_PUBLIC_BUCKET_S3}/assets/icons/icon_ubication.svg`}
                   alt="Icono de buscar"
                   height={20}
                   width={20}
@@ -113,7 +113,7 @@ const FormReserve = () => {
             <li>
               <div>
                 <Image
-                  src={"./assets/icon_ubication.svg"}
+                  src={`${process.env.NEXT_PUBLIC_BUCKET_S3}/assets/icons/icon_ubication.svg`}
                   alt="Icono de buscar"
                   height={20}
                   width={20}
@@ -130,7 +130,7 @@ const FormReserve = () => {
           <label htmlFor="search" onClick={handleFocus}>
             <div className={styles.type}>
               <Image
-                src={"./assets/icon_search.svg"}
+                src={`${process.env.NEXT_PUBLIC_BUCKET_S3}/assets/icons/icon_search.svg`}
                 alt="Icono de buscar"
                 height={20}
                 width={20}
@@ -151,7 +151,7 @@ const FormReserve = () => {
                     className={name === active?.name ? styles.active : ""}
                   >
                     <Image
-                      src={photo}
+                      src={`${process.env.NEXT_PUBLIC_BUCKET_S3}${photo}`}
                       alt="Foto de mapa"
                       width={180}
                       height={180}
@@ -167,7 +167,7 @@ const FormReserve = () => {
           <label htmlFor="filter2">
             <div className={styles.type}>
               <Image
-                src={"./assets/icon_calendar.svg"}
+                src={`${process.env.NEXT_PUBLIC_BUCKET_S3}/assets/icons/icon_calendar.svg`}
                 alt="Icono de buscar"
                 height={20}
                 width={20}
@@ -195,7 +195,7 @@ const FormReserve = () => {
           <label htmlFor="filter3">
             <div className={styles.type}>
               <Image
-                src={"./assets/icon_reloj.svg"}
+                src={`${process.env.NEXT_PUBLIC_BUCKET_S3}/assets/icons/icon_reloj.svg`}
                 alt="Icono de buscar"
                 height={20}
                 width={20}

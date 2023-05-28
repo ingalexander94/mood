@@ -30,7 +30,7 @@ const BottomFilter = ({ textButton, showClear }: Props) => {
             <button className={styles.clear}>
               <Image
                 alt="Icono de un borrador"
-                src={"/assets/icon_clear.svg"}
+                src={`${process.env.NEXT_PUBLIC_BUCKET_S3}/assets/icons/icon_clear.svg`}
                 width={30}
                 height={30}
               />

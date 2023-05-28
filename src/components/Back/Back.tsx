@@ -20,7 +20,7 @@ const Back = ({ isShared }: Props) => {
         <div className="share">
           <button>
             <Image
-              src={"/assets/icon_favorites.svg"}
+              src={`${process.env.NEXT_PUBLIC_BUCKET_S3}/assets/icons/icon_favorites.svg`}
               alt="Icono de compatir"
               width={25}
               height={25}
@@ -28,7 +28,7 @@ const Back = ({ isShared }: Props) => {
           </button>
           <button>
             <Image
-              src={"/assets/icon_share.svg"}
+              src={`${process.env.NEXT_PUBLIC_BUCKET_S3}/assets/icons/icon_share.svg`}
               alt="Icono de favorito"
               width={25}
               height={25}

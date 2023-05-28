@@ -31,7 +31,7 @@ const Categories = () => {
               >
                 <Image
                   alt={`Icono de ${name}`}
-                  src={icon}
+                  src={`${process.env.NEXT_PUBLIC_BUCKET_S3}${icon}`}
                   width={25}
                   height={25}
                 />
