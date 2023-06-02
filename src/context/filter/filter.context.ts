@@ -12,6 +12,7 @@ interface ContextProps {
   setHour: (hour: string) => void;
   setToday: (current: boolean) => void;
   setResults: () => void;
+  unsetResults: () => void;
 }
 
 export const FilterContext = createContext({} as ContextProps);

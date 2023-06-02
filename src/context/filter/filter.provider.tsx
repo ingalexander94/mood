@@ -59,6 +59,12 @@ function FilterProvider({ children, defaultPlace }: Props) {
     });
   };
 
+  const unsetResults = () => {
+    dispatch({
+      type: "[Filter] - UnsetResults",
+    });
+  };
+
   return (
     <FilterContext.Provider
       value={{
@@ -68,6 +74,7 @@ function FilterProvider({ children, defaultPlace }: Props) {
         setHour,
         setToday,
         setResults,
+        unsetResults,
       }}
     >
       {children}

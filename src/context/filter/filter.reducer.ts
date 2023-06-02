@@ -21,6 +21,9 @@ type FilterActionType =
     }
   | {
       type: "[Filter] - SetResults";
+    }
+  | {
+      type: "[Filter] - UnsetResults";
     };
 
 export const filterReducer = (
@@ -53,6 +56,11 @@ export const filterReducer = (
       return {
         ...state,
         results: [1, 2, 3, 4, 5, 6],
+      };
+    case "[Filter] - UnsetResults":
+      return {
+        ...state,
+        results: [],
       };
     default:
       return state;

@@ -5,4 +5,5 @@ section.wrapper {
   position: sticky;
   top: 95px;
   z-index: 5;
+  overflow: hidden;
 }

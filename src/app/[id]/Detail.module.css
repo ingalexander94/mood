@@ -18,6 +18,10 @@
   column-gap: 10px;
 }
 
+.detail > div.cover > div.share a {
+  color: var(--black);
+}
+
 .detail > div.cover > div.share a:active {
   transform: scale(0.9);
 }

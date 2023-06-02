@@ -12,17 +12,17 @@ const SEO = () => {
         content="Aplicación para realizar reservas de moteles en la ciudad de Cúcuta"
       />
       <meta property="og:title" content="Mood" />
-      <meta property="og:url" content="http://localhost:3000" />
+      <meta property="og:url" content="https://reservasmood.com" />
       <meta property="og:type" content="website" />
       <meta
         name="keywords"
-        content="Cúcuta, Moteles, Hoteles, Reservas, Mood, Hospedaje"
+        content="Cúcuta, Moteles, Hoteles, Reservas, Mood, Hospedaje, Reservas Mood"
       />
       <meta
         name="viewport"
         content="minimum-scale=1, maximum-scale=5, initial-scale=1, width=device-width, shrink-to-fit=no, viewport-fit=cover"
       />
-      <meta name="theme-color" content="#FF7122" />
+      <meta name="theme-color" content="#f7f7f7" />
       <meta name="MobileOptimized" content="width" />
       <meta name="HandheldFriendly" content="true" />
       <meta name="apple-mobile-web-app-capable" content="yes" />
