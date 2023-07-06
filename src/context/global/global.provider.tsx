@@ -24,7 +24,7 @@ export default function GlobalProvider({
   const GLOBAL_INITIAL_STATE: GlobalState = {
     categories,
     places,
-    indexCategory: 0,
+    indexCategory: -1,
   };
   const [state, dispatch] = useReducer(globalReducer, GLOBAL_INITIAL_STATE);
 
