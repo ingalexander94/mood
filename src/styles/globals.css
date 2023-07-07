@@ -50,10 +50,6 @@ a {
   user-select: none;
 }
 
-main {
-  margin-bottom: 60px;
-}
-
 button {
   -webkit-tap-highlight-color: transparent;
   -webkit-touch-callout: none;

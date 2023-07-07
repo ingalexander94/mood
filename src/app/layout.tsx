@@ -1,5 +1,4 @@
 import SEO from "@/components/SEO/SEO";
-import Bottombar from "@/components/Bottombar/Bottombar";
 import { Metadata } from "next";
 import { fetchRequest } from "@/utils/fetch";
 import GlobalProvider from "@/context/global/global.provider";
@@ -8,9 +7,10 @@ import { IPlace, Place } from "@/interfaces/Place.interface";
 import { ICategory } from "@/interfaces/Category.interface";
 import { MapProvider } from "@/context/map";
 import "../styles/globals.css";
+import Bottombar from "@/components/Bottombar/Bottombar";
 
 export const metadata: Metadata = {
-  title: "Mood | Habitaciones",
+  title: "Mood | Bienvenido",
 };
 
 type Props = {

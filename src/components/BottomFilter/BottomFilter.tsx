@@ -19,7 +19,7 @@ const BottomFilter = ({ textButton, showClear }: Props) => {
 
   const handleSetResults = () => {
     setResults();
-    router.push("/");
+    router.push("/inicio");
   };
 
   return (

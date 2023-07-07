@@ -42,9 +42,11 @@ const Bottombar = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [lastScrollY, results.length]);
 
-  return (
+  return pathname === "/" ? (
+    <></>
+  ) : (
     <div className={styles.nav} ref={appbarRef}>
-      {pathname === "/" && results.length > 0 && (
+      {pathname === "/inicio" && results.length > 0 && (
         <ShowMap visibility={visibility} />
       )}
       <nav className={styles.bottombar}>

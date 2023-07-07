@@ -1,6 +1,6 @@
 export const Routes = {
   HOME: {
-    path: "/",
+    path: "/inicio",
     name: "Inicio",
     icon: "icon_home.svg",
   },

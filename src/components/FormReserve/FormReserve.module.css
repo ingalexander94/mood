@@ -3,6 +3,7 @@ section.wrapper {
   max-width: 750px;
   padding: 10px;
   overflow: hidden;
+  padding-bottom: 60px;
 }
 
 section.wrapper > label {

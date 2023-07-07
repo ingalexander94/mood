@@ -1,0 +1,90 @@
+.welcome {
+  background: #ededed;
+  height: 100vh;
+  overflow-y: hidden;
+  text-align: center;
+  padding: 0 30px 60px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.welcome div.logo {
+  background: var(--light-backround);
+  position: absolute;
+  padding: 0 40px;
+  top: 0;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.welcome div.logo::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -20px;
+  height: 20px;
+  width: 20px;
+  border-top-right-radius: 20px;
+  background: #ededed;
+  box-shadow: 5px -5px 0 var(--light-backround);
+}
+
+.welcome div.logo::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -20px;
+  height: 20px;
+  width: 20px;
+  border-top-left-radius: 20px;
+  background: #ededed;
+  box-shadow: -5px -5px 0 var(--light-backround);
+}
+
+.welcome div.description {
+  color: var(--black);
+}
+
+.welcome div.description h3 {
+  font-size: 24;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.welcome div.description p {
+  font-size: 12;
+  font-weight: 400;
+}
+
+.welcome div.description > div {
+  margin-top: 120px;
+}
+
+.welcome div.description > div div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  background: var(--black);
+  color: white;
+  border-radius: 10px;
+}
+
+.welcome div.description > div div input {
+  border: none;
+  outline: none;
+  background: var(--black);
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 0 5px;
+}
+
+.welcome div.description > div div input::placeholder {
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  width: calc(100% + 10px);
+}
