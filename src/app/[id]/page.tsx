@@ -30,7 +30,7 @@ const Detail = () => {
       <div className={styles.cover}>
         <Slider height="235px" more={true} multiple={true} />
         <div className={styles.share}>
-          <Link href={"/"}>{"<"}</Link>
+          <Link href={"/inicio"}>{"<"}</Link>
           <div>
             <button>
               <Image
