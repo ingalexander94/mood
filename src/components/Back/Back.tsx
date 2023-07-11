@@ -15,7 +15,15 @@ const Back = ({ isShared }: Props) => {
 
   return (
     <nav className={styles.back}>
-      <button onClick={toBack}> {"<"} Volver</button>
+      <button onClick={toBack}>
+        <Image
+          alt="Icono de compartir"
+          src={`${process.env.NEXT_PUBLIC_BUCKET_S3}/assets/icons/left_arrow.svg`}
+          height={20}
+          width={20}
+        />
+        Volver
+      </button>
       {isShared && (
         <div className="share">
           <button>

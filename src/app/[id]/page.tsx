@@ -30,7 +30,14 @@ const Detail = () => {
       <div className={styles.cover}>
         <Slider height="235px" more={true} multiple={true} />
         <div className={styles.share}>
-          <Link href={"/inicio"}>{"<"}</Link>
+          <Link href={"/inicio"}>
+            <Image
+              alt="Icono de compartir"
+              src={`${process.env.NEXT_PUBLIC_BUCKET_S3}/assets/icons/left_arrow.svg`}
+              height={20}
+              width={20}
+            />
+          </Link>
           <div>
             <button>
               <Image

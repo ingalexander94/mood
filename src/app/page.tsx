@@ -24,16 +24,22 @@ const App = async () => {
           width={100}
         />
       </div>
+      <Image
+        alt="Emoji"
+        src={`${process.env.NEXT_PUBLIC_BUCKET_S3}/assets/emoji.png`}
+        height={130}
+        width={135}
+      />
       <div className={styles.description}>
-        <h3>Es hora de que la visita a los moteles sea más discreta</h3>
+        <h3>¡Pronto descubrirás el placer y la discreción en un solo lugar!</h3>
         <p>
-          Estamos reuniendo los mejores espacios para que vivas en cada una de
-          ellas una experiencia única.
+          Estamos reuniendo los mejores espacios para que vivas en cada uno de
+          ellos una experiencia única.
         </p>
         <br />
         <p>
-          Se uno de los primero en conocer de esta nueva forma de reservar tu
-          motel
+          Se uno de los primero en conocer la nueva forma de reservar una
+          habitación temática.
         </p>
         <div>
           <div>

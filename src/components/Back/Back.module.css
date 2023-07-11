@@ -16,6 +16,8 @@
   color: var(--black);
   font-size: 14px;
   font-weight: bold;
+  display: flex;
+  align-items: center;
 }
 
 .back button {

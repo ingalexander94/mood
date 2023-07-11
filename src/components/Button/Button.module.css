@@ -5,8 +5,7 @@
   background: var(--gradient-background);
   font-size: 14px;
   font-weight: bold;
-  height: 33px;
-  padding: 0 10px;
+  padding: 10px 18px;
   color: var(--white);
   box-shadow: 0px 6px 10px #ff712233;
   border-radius: 10px;
